@@ -1,0 +1,2104 @@
+<Giuigi>
+
+<append xpath="/gameevents">
+
+<action_sequence name="action_givemissionaryquestG">
+
+	<decision class="If">
+		<requirement class="HasBuffByTag">
+			<property name="buff_tags" value="protection_blessing"/>
+		</requirement>
+		
+		<action class="BeltTooltip">
+			<property name="text_key" value="quest_warningMissionaryG"/>
+		</action>
+	</decision>
+	<decision class="If">
+		<action class="ModifyVarInt">
+			<property name="phase" value="1"/>
+			<property name="var_name" value="action_givemissionaryquestG_varint"/>
+			<property name="value" value="1-5"/>
+		</action>
+		
+		<requirement class="HasBuffByTag">
+			<property name="phase" value="1"/>
+			<property name="buff_tags" value="protection_blessing"/>
+			<property name="invert" value="true"/>
+		</requirement>
+		
+		<requirement class="HasBuff">
+			<property name="phase" value="1"/>
+			<property name="buff_name" value="buffHolyWaterG"/>
+			<property name="invert" value="true"/>
+		</requirement>
+		
+		<requirement class="HasBuff">
+			<property name="phase" value="1"/>
+			<property name="buff_name" value="buffInfectedMissionaryG"/>
+			<property name="invert" value="true"/>
+		</requirement>
+		
+		<action class="AddQuest">
+			<property name="phase" value="2"/>
+			<requirement class="VarInt">
+				<property name="operation" value="Equals"/>
+				<property name="var_name" value="action_givemissionaryquestG_varint"/>
+				<property name="value" value="1"/>
+			</requirement>
+			<property name="quest" value="tier2_clear_infested_MissionaryG"/>
+		</action>
+		
+		<action class="AddBuff">
+			<property name="phase" value="2"/>
+			<requirement class="VarInt">
+				<property name="operation" value="Equals"/>
+				<property name="var_name" value="action_givemissionaryquestG_varint"/>
+				<property name="value" value="1"/>
+			</requirement>
+			<property name="buff_name" value="buffProtectionBlessing7G"/>
+		</action>
+		
+		<action class="AddQuest">
+			<property name="phase" value="2"/>
+			<requirement class="VarInt">
+				<property name="operation" value="Equals"/>
+				<property name="var_name" value="action_givemissionaryquestG_varint"/>
+				<property name="value" value="2"/>
+			</requirement>
+			<property name="quest" value="tier3_clear_infested_MissionaryG"/>
+		</action>
+		
+		<action class="AddBuff">
+			<property name="phase" value="2"/>
+			<requirement class="VarInt">
+				<property name="operation" value="Equals"/>
+				<property name="var_name" value="action_givemissionaryquestG_varint"/>
+				<property name="value" value="2"/>
+			</requirement>
+			<property name="buff_name" value="buffProtectionBlessing14G"/>
+		</action>	
+	
+		<action class="AddQuest">
+			<property name="phase" value="2"/>
+			<requirement class="VarInt">
+				<property name="operation" value="Equals"/>
+				<property name="var_name" value="action_givemissionaryquestG_varint"/>
+				<property name="value" value="3"/>
+			</requirement>
+			<property name="quest" value="tier4_clear_infested_MissionaryG"/>
+		</action>
+		
+		<action class="AddBuff">
+			<property name="phase" value="2"/>
+			<requirement class="VarInt">
+				<property name="operation" value="Equals"/>
+				<property name="var_name" value="action_givemissionaryquestG_varint"/>
+				<property name="value" value="3"/>
+			</requirement>
+			<property name="buff_name" value="buffProtectionBlessing14G"/>
+		</action>
+		
+		<action class="AddQuest">
+			<property name="phase" value="2"/>
+			<requirement class="VarInt">
+				<property name="operation" value="Equals"/>
+				<property name="var_name" value="action_givemissionaryquestG_varint"/>
+				<property name="value" value="4"/>
+			</requirement>
+			<property name="quest" value="tier5_clear_infested_MissionaryG"/>
+		</action>
+		
+		<action class="AddBuff">
+			<property name="phase" value="2"/>
+			<requirement class="VarInt">
+				<property name="operation" value="Equals"/>
+				<property name="var_name" value="action_givemissionaryquestG_varint"/>
+				<property name="value" value="4"/>
+			</requirement>
+			<property name="buff_name" value="buffProtectionBlessing28G"/>
+		</action>
+	
+		<action class="AddQuest">
+			<property name="phase" value="2"/>
+			<requirement class="VarInt">
+				<property name="operation" value="Equals"/>
+				<property name="var_name" value="action_givemissionaryquestG_varint"/>
+				<property name="value" value="5"/>
+			</requirement>
+			<property name="quest" value="tier6_clear_infested_MissionaryG"/>
+		</action>
+		
+		<action class="AddBuff">
+			<property name="phase" value="2"/>
+			<requirement class="VarInt">
+				<property name="operation" value="Equals"/>
+				<property name="var_name" value="action_givemissionaryquestG_varint"/>
+				<property name="value" value="5"/>
+			</requirement>
+			<property name="buff_name" value="buffProtectionBlessing28G"/>
+		</action>
+	</decision>
+	<decision class="If">
+		<requirement class="HasBuff">
+			<property name="buff_name" value="buffHolyWaterG"/>
+		</requirement>
+		
+		<property name="action_type" value="Game"/>
+
+		<action class="SetScreenEffect">
+			<property name="phase" value="0"/>
+			<property name="screen_effect" value="FadeToBlack"/>
+			<property name="intensity" value="1"/>
+			<property name="fade_time" value="0.05"/>
+		</action>
+
+		<action class="ModifyCVar">
+			<property name="phase" value="0"/>
+			<property name="cvar" value="_wetness"/>
+			<property name="operation" value="set"/>
+			<property name="value" value="0"/>
+		</action>
+		
+		<action class="ResetMap">
+			<property name="remove_discovery" value="true"/>
+			<property name="remove_waypoints" value="true"/>
+		</action>
+
+		<action class="RemoveDeathBuffs">
+		</action>
+
+		<action class="RemoveBuffsByTag">
+			<property name="buff_tag" value="protection_blessing,new_journey"/>
+		</action>
+		
+		<action class="ResetPlayerData">
+			<property name="reset_skills" value="false"/>
+			<property name="reset_books" value="false"/>
+			<property name="reset_crafting" value="false"/>
+			<property name="reset_levels" value="false"/>
+			<property name="remove_landclaims" value="true"/>
+			<property name="remove_bedroll" value="true"/>
+			<property name="remove_challenges" value="false"/>
+			<property name="remove_quests" value="true"/>
+			<property name="remove_backpack" value="true"/>
+			<property name="reset_stats" value="false"/>
+		</action>
+
+		<action class="ModifyEntityStat">
+			<property name="stat" value="Food"/>
+			<property name="operation" value="SetMax"/>
+		</action>
+
+		<action class="ModifyEntityStat">
+			<property name="stat" value="Water"/>
+			<property name="operation" value="SetMax"/>
+		</action>
+
+		<action class="RemoveItems">
+			<property name="items_location" value="Toolbelt,Backpack,Equipment,Held"/>
+			<property name="items_tags" value="new_journey"/>
+		</action>
+		
+		<action class="AddBuff">
+			<property name="buff_name" value="buffPilgrimagingMissionaryG"/>
+		</action>	
+
+		<action class="Teleport">
+			<property name="target_position" value="20000,59,20000"/>
+		</action>
+
+		<action class="BeltTooltip">
+			<property name="phase" value="1"/>
+			<property name="text_key" value="quest_newJourneyMissionary1G"/>
+		</action>
+
+		<action class="Delay">
+			<property name="phase" value="1"/>
+			<property name="time" value="5"/>
+		</action>
+
+		<action class="ResetRegions" >
+			<property name="phase" value="1"/>
+			<property name="reset_type" value="Full"/>
+		</action>
+		
+		<action class="Delay">
+			<property name="phase" value="1"/>
+			<property name="time" value="5"/>
+		</action>
+		
+		<action class="ModifyVarInt">
+			<property name="phase" value="1"/>
+			<property name="var_name" value="roll_teleport_varint"/>
+			<property name="value" value="1-80"/>
+		</action>
+
+		<action class="Teleport">
+			<requirement class="VarInt">
+				<property name="operation" value="Equals"/>
+				<property name="var_name" value="roll_teleport_varint"/>
+				<property name="value" value="1"/>
+			</requirement>
+			<property name="phase" value="2"/>
+			<property name="target_position" value="50,250,50"/>
+		</action>
+		
+		<action class="Teleport">
+			<requirement class="VarInt">
+				<property name="operation" value="Equals"/>
+				<property name="var_name" value="roll_teleport_varint"/>
+				<property name="value" value="2"/>
+			</requirement>
+			<property name="phase" value="2"/>
+			<property name="target_position" value="-50,250,-50"/>
+		</action>
+		
+		<action class="Teleport">
+			<requirement class="VarInt">
+				<property name="operation" value="Equals"/>
+				<property name="var_name" value="roll_teleport_varint"/>
+				<property name="value" value="3"/>
+			</requirement>
+			<property name="phase" value="2"/>
+			<property name="target_position" value="50,250,-50"/>
+		</action>
+		
+		<action class="Teleport">
+			<requirement class="VarInt">
+				<property name="operation" value="Equals"/>
+				<property name="var_name" value="roll_teleport_varint"/>
+				<property name="value" value="4"/>
+			</requirement>
+			<property name="phase" value="2"/>
+			<property name="target_position" value="-50,250,50"/>
+		</action>
+		
+		<action class="Teleport">
+			<requirement class="VarInt">
+				<property name="operation" value="Equals"/>
+				<property name="var_name" value="roll_teleport_varint"/>
+				<property name="value" value="5"/>
+			</requirement>
+			<property name="phase" value="2"/>
+			<property name="target_position" value="100,250,100"/>
+		</action>
+		
+		<action class="Teleport">
+			<requirement class="VarInt">
+				<property name="operation" value="Equals"/>
+				<property name="var_name" value="roll_teleport_varint"/>
+				<property name="value" value="6"/>
+			</requirement>
+			<property name="phase" value="2"/>
+			<property name="target_position" value="-100,250,-100"/>
+		</action>
+		
+		<action class="Teleport">
+			<requirement class="VarInt">
+				<property name="operation" value="Equals"/>
+				<property name="var_name" value="roll_teleport_varint"/>
+				<property name="value" value="7"/>
+			</requirement>
+			<property name="phase" value="2"/>
+			<property name="target_position" value="100,250,-100"/>
+		</action>
+		
+		<action class="Teleport">
+			<requirement class="VarInt">
+				<property name="operation" value="Equals"/>
+				<property name="var_name" value="roll_teleport_varint"/>
+				<property name="value" value="8"/>
+			</requirement>
+			<property name="phase" value="2"/>
+			<property name="target_position" value="-100,250,100"/>
+		</action>
+		
+		<action class="Teleport">
+			<requirement class="VarInt">
+				<property name="operation" value="Equals"/>
+				<property name="var_name" value="roll_teleport_varint"/>
+				<property name="value" value="9"/>
+			</requirement>
+			<property name="phase" value="2"/>
+			<property name="target_position" value="150,250,150"/>
+		</action>
+		
+		<action class="Teleport">
+			<requirement class="VarInt">
+				<property name="operation" value="Equals"/>
+				<property name="var_name" value="roll_teleport_varint"/>
+				<property name="value" value="10"/>
+			</requirement>
+			<property name="phase" value="2"/>
+			<property name="target_position" value="-150,250,-150"/>
+		</action>
+		
+		<action class="Teleport">
+			<requirement class="VarInt">
+				<property name="operation" value="Equals"/>
+				<property name="var_name" value="roll_teleport_varint"/>
+				<property name="value" value="11"/>
+			</requirement>
+			<property name="phase" value="2"/>
+			<property name="target_position" value="150,250,-150"/>
+		</action>
+		
+		<action class="Teleport">
+			<requirement class="VarInt">
+				<property name="operation" value="Equals"/>
+				<property name="var_name" value="roll_teleport_varint"/>
+				<property name="value" value="12"/>
+			</requirement>
+			<property name="phase" value="2"/>
+			<property name="target_position" value="-150,250,150"/>
+		</action>
+		
+		<action class="Teleport">
+			<requirement class="VarInt">
+				<property name="operation" value="Equals"/>
+				<property name="var_name" value="roll_teleport_varint"/>
+				<property name="value" value="13"/>
+			</requirement>
+			<property name="phase" value="2"/>
+			<property name="target_position" value="200,250,200"/>
+		</action>
+		
+		<action class="Teleport">
+			<requirement class="VarInt">
+				<property name="operation" value="Equals"/>
+				<property name="var_name" value="roll_teleport_varint"/>
+				<property name="value" value="14"/>
+			</requirement>
+			<property name="phase" value="2"/>
+			<property name="target_position" value="-200,250,-200"/>
+		</action>
+		
+		<action class="Teleport">
+			<requirement class="VarInt">
+				<property name="operation" value="Equals"/>
+				<property name="var_name" value="roll_teleport_varint"/>
+				<property name="value" value="15"/>
+			</requirement>
+			<property name="phase" value="2"/>
+			<property name="target_position" value="200,250,-200"/>
+		</action>
+		
+		<action class="Teleport">
+			<requirement class="VarInt">
+				<property name="operation" value="Equals"/>
+				<property name="var_name" value="roll_teleport_varint"/>
+				<property name="value" value="16"/>
+			</requirement>
+			<property name="phase" value="2"/>
+			<property name="target_position" value="-200,250,200"/>
+		</action>
+		
+		<action class="Teleport">
+			<requirement class="VarInt">
+				<property name="operation" value="Equals"/>
+				<property name="var_name" value="roll_teleport_varint"/>
+				<property name="value" value="17"/>
+			</requirement>
+			<property name="phase" value="2"/>
+			<property name="target_position" value="250,250,250"/>
+		</action>
+		
+		<action class="Teleport">
+			<requirement class="VarInt">
+				<property name="operation" value="Equals"/>
+				<property name="var_name" value="roll_teleport_varint"/>
+				<property name="value" value="18"/>
+			</requirement>
+			<property name="phase" value="2"/>
+			<property name="target_position" value="-250,250,-250"/>
+		</action>
+		
+		<action class="Teleport">
+			<requirement class="VarInt">
+				<property name="operation" value="Equals"/>
+				<property name="var_name" value="roll_teleport_varint"/>
+				<property name="value" value="19"/>
+			</requirement>
+			<property name="phase" value="2"/>
+			<property name="target_position" value="250,250,-250"/>
+		</action>
+		
+		<action class="Teleport">
+			<requirement class="VarInt">
+				<property name="operation" value="Equals"/>
+				<property name="var_name" value="roll_teleport_varint"/>
+				<property name="value" value="20"/>
+			</requirement>
+			<property name="phase" value="2"/>
+			<property name="target_position" value="-250,250,250"/>
+		</action>
+		
+		<action class="Teleport">
+			<requirement class="VarInt">
+				<property name="operation" value="Equals"/>
+				<property name="var_name" value="roll_teleport_varint"/>
+				<property name="value" value="21"/>
+			</requirement>
+			<property name="phase" value="2"/>
+			<property name="target_position" value="300,250,300"/>
+		</action>
+		
+		<action class="Teleport">
+			<requirement class="VarInt">
+				<property name="operation" value="Equals"/>
+				<property name="var_name" value="roll_teleport_varint"/>
+				<property name="value" value="22"/>
+			</requirement>
+			<property name="phase" value="2"/>
+			<property name="target_position" value="-300,250,-300"/>
+		</action>
+		
+		<action class="Teleport">
+			<requirement class="VarInt">
+				<property name="operation" value="Equals"/>
+				<property name="var_name" value="roll_teleport_varint"/>
+				<property name="value" value="23"/>
+			</requirement>
+			<property name="phase" value="2"/>
+			<property name="target_position" value="300,250,-300"/>
+		</action>
+		
+		<action class="Teleport">
+			<requirement class="VarInt">
+				<property name="operation" value="Equals"/>
+				<property name="var_name" value="roll_teleport_varint"/>
+				<property name="value" value="24"/>
+			</requirement>
+			<property name="phase" value="2"/>
+			<property name="target_position" value="-300,250,300"/>
+		</action>
+		
+		<action class="Teleport">
+			<requirement class="VarInt">
+				<property name="operation" value="Equals"/>
+				<property name="var_name" value="roll_teleport_varint"/>
+				<property name="value" value="25"/>
+			</requirement>
+			<property name="phase" value="2"/>
+			<property name="target_position" value="350,250,350"/>
+		</action>
+		
+		<action class="Teleport">
+			<requirement class="VarInt">
+				<property name="operation" value="Equals"/>
+				<property name="var_name" value="roll_teleport_varint"/>
+				<property name="value" value="26"/>
+			</requirement>
+			<property name="phase" value="2"/>
+			<property name="target_position" value="-350,250,-350"/>
+		</action>
+		
+		<action class="Teleport">
+			<requirement class="VarInt">
+				<property name="operation" value="Equals"/>
+				<property name="var_name" value="roll_teleport_varint"/>
+				<property name="value" value="27"/>
+			</requirement>
+			<property name="phase" value="2"/>
+			<property name="target_position" value="350,250,-350"/>
+		</action>
+		
+		<action class="Teleport">
+			<requirement class="VarInt">
+				<property name="operation" value="Equals"/>
+				<property name="var_name" value="roll_teleport_varint"/>
+				<property name="value" value="28"/>
+			</requirement>
+			<property name="phase" value="2"/>
+			<property name="target_position" value="-350,250,350"/>
+		</action>
+		
+		<action class="Teleport">
+			<requirement class="VarInt">
+				<property name="operation" value="Equals"/>
+				<property name="var_name" value="roll_teleport_varint"/>
+				<property name="value" value="29"/>
+			</requirement>
+			<property name="phase" value="2"/>
+			<property name="target_position" value="400,250,400"/>
+		</action>
+		
+		<action class="Teleport">
+			<requirement class="VarInt">
+				<property name="operation" value="Equals"/>
+				<property name="var_name" value="roll_teleport_varint"/>
+				<property name="value" value="30"/>
+			</requirement>
+			<property name="phase" value="2"/>
+			<property name="target_position" value="-400,250,-400"/>
+		</action>
+		
+		<action class="Teleport">
+			<requirement class="VarInt">
+				<property name="operation" value="Equals"/>
+				<property name="var_name" value="roll_teleport_varint"/>
+				<property name="value" value="31"/>
+			</requirement>
+			<property name="phase" value="2"/>
+			<property name="target_position" value="400,250,-400"/>
+		</action>
+		
+		<action class="Teleport">
+			<requirement class="VarInt">
+				<property name="operation" value="Equals"/>
+				<property name="var_name" value="roll_teleport_varint"/>
+				<property name="value" value="32"/>
+			</requirement>
+			<property name="phase" value="2"/>
+			<property name="target_position" value="-400,250,400"/>
+		</action>
+		
+		<action class="Teleport">
+			<requirement class="VarInt">
+				<property name="operation" value="Equals"/>
+				<property name="var_name" value="roll_teleport_varint"/>
+				<property name="value" value="33"/>
+			</requirement>
+			<property name="phase" value="2"/>
+			<property name="target_position" value="450,250,450"/>
+		</action>
+		
+		<action class="Teleport">
+			<requirement class="VarInt">
+				<property name="operation" value="Equals"/>
+				<property name="var_name" value="roll_teleport_varint"/>
+				<property name="value" value="34"/>
+			</requirement>
+			<property name="phase" value="2"/>
+			<property name="target_position" value="-450,250,-450"/>
+		</action>
+		
+		<action class="Teleport">
+			<requirement class="VarInt">
+				<property name="operation" value="Equals"/>
+				<property name="var_name" value="roll_teleport_varint"/>
+				<property name="value" value="35"/>
+			</requirement>
+			<property name="phase" value="2"/>
+			<property name="target_position" value="450,250,-450"/>
+		</action>
+		
+		<action class="Teleport">
+			<requirement class="VarInt">
+				<property name="operation" value="Equals"/>
+				<property name="var_name" value="roll_teleport_varint"/>
+				<property name="value" value="36"/>
+			</requirement>
+			<property name="phase" value="2"/>
+			<property name="target_position" value="-450,250,450"/>
+		</action>
+		
+		<action class="Teleport">
+			<requirement class="VarInt">
+				<property name="operation" value="Equals"/>
+				<property name="var_name" value="roll_teleport_varint"/>
+				<property name="value" value="37"/>
+			</requirement>
+			<property name="phase" value="2"/>
+			<property name="target_position" value="500,250,500"/>
+		</action>
+		
+		<action class="Teleport">
+			<requirement class="VarInt">
+				<property name="operation" value="Equals"/>
+				<property name="var_name" value="roll_teleport_varint"/>
+				<property name="value" value="38"/>
+			</requirement>
+			<property name="phase" value="2"/>
+			<property name="target_position" value="-500,250,-500"/>
+		</action>
+		
+		<action class="Teleport">
+			<requirement class="VarInt">
+				<property name="operation" value="Equals"/>
+				<property name="var_name" value="roll_teleport_varint"/>
+				<property name="value" value="39"/>
+			</requirement>
+			<property name="phase" value="2"/>
+			<property name="target_position" value="500,250,-500"/>
+		</action>
+		
+		<action class="Teleport">
+			<requirement class="VarInt">
+				<property name="operation" value="Equals"/>
+				<property name="var_name" value="roll_teleport_varint"/>
+				<property name="value" value="40"/>
+			</requirement>
+			<property name="phase" value="2"/>
+			<property name="target_position" value="-500,250,500"/>
+		</action>
+		
+		<action class="Teleport">
+			<requirement class="VarInt">
+				<property name="operation" value="Equals"/>
+				<property name="var_name" value="roll_teleport_varint"/>
+				<property name="value" value="41"/>
+			</requirement>
+			<property name="phase" value="2"/>
+			<property name="target_position" value="550,250,550"/>
+		</action>
+		
+		<action class="Teleport">
+			<requirement class="VarInt">
+				<property name="operation" value="Equals"/>
+				<property name="var_name" value="roll_teleport_varint"/>
+				<property name="value" value="42"/>
+			</requirement>
+			<property name="phase" value="2"/>
+			<property name="target_position" value="-550,250,-550"/>
+		</action>
+		
+		<action class="Teleport">
+			<requirement class="VarInt">
+				<property name="operation" value="Equals"/>
+				<property name="var_name" value="roll_teleport_varint"/>
+				<property name="value" value="43"/>
+			</requirement>
+			<property name="phase" value="2"/>
+			<property name="target_position" value="550,250,-550"/>
+		</action>
+		
+		<action class="Teleport">
+			<requirement class="VarInt">
+				<property name="operation" value="Equals"/>
+				<property name="var_name" value="roll_teleport_varint"/>
+				<property name="value" value="44"/>
+			</requirement>
+			<property name="phase" value="2"/>
+			<property name="target_position" value="-550,250,550"/>
+		</action>
+		
+		<action class="Teleport">
+			<requirement class="VarInt">
+				<property name="operation" value="Equals"/>
+				<property name="var_name" value="roll_teleport_varint"/>
+				<property name="value" value="45"/>
+			</requirement>
+			<property name="phase" value="2"/>
+			<property name="target_position" value="600,250,600"/>
+		</action>
+		
+		<action class="Teleport">
+			<requirement class="VarInt">
+				<property name="operation" value="Equals"/>
+				<property name="var_name" value="roll_teleport_varint"/>
+				<property name="value" value="46"/>
+			</requirement>
+			<property name="phase" value="2"/>
+			<property name="target_position" value="-600,250,-600"/>
+		</action>
+		
+		<action class="Teleport">
+			<requirement class="VarInt">
+				<property name="operation" value="Equals"/>
+				<property name="var_name" value="roll_teleport_varint"/>
+				<property name="value" value="47"/>
+			</requirement>
+			<property name="phase" value="2"/>
+			<property name="target_position" value="600,250,-600"/>
+		</action>
+		
+		<action class="Teleport">
+			<requirement class="VarInt">
+				<property name="operation" value="Equals"/>
+				<property name="var_name" value="roll_teleport_varint"/>
+				<property name="value" value="48"/>
+			</requirement>
+			<property name="phase" value="2"/>
+			<property name="target_position" value="-600,250,600"/>
+		</action>
+		
+		<action class="Teleport">
+			<requirement class="VarInt">
+				<property name="operation" value="Equals"/>
+				<property name="var_name" value="roll_teleport_varint"/>
+				<property name="value" value="49"/>
+			</requirement>
+			<property name="phase" value="2"/>
+			<property name="target_position" value="650,250,650"/>
+		</action>
+		
+		<action class="Teleport">
+			<requirement class="VarInt">
+				<property name="operation" value="Equals"/>
+				<property name="var_name" value="roll_teleport_varint"/>
+				<property name="value" value="50"/>
+			</requirement>
+			<property name="phase" value="2"/>
+			<property name="target_position" value="-650,250,-650"/>
+		</action>
+		
+		<action class="Teleport">
+			<requirement class="VarInt">
+				<property name="operation" value="Equals"/>
+				<property name="var_name" value="roll_teleport_varint"/>
+				<property name="value" value="51"/>
+			</requirement>
+			<property name="phase" value="2"/>
+			<property name="target_position" value="650,250,-650"/>
+		</action>
+		
+		<action class="Teleport">
+			<requirement class="VarInt">
+				<property name="operation" value="Equals"/>
+				<property name="var_name" value="roll_teleport_varint"/>
+				<property name="value" value="52"/>
+			</requirement>
+			<property name="phase" value="2"/>
+			<property name="target_position" value="-650,250,650"/>
+		</action>
+		
+		<action class="Teleport">
+			<requirement class="VarInt">
+				<property name="operation" value="Equals"/>
+				<property name="var_name" value="roll_teleport_varint"/>
+				<property name="value" value="53"/>
+			</requirement>
+			<property name="phase" value="2"/>
+			<property name="target_position" value="700,250,700"/>
+		</action>
+		
+		<action class="Teleport">
+			<requirement class="VarInt">
+				<property name="operation" value="Equals"/>
+				<property name="var_name" value="roll_teleport_varint"/>
+				<property name="value" value="54"/>
+			</requirement>
+			<property name="phase" value="2"/>
+			<property name="target_position" value="-700,250,-700"/>
+		</action>
+		
+		<action class="Teleport">
+			<requirement class="VarInt">
+				<property name="operation" value="Equals"/>
+				<property name="var_name" value="roll_teleport_varint"/>
+				<property name="value" value="55"/>
+			</requirement>
+			<property name="phase" value="2"/>
+			<property name="target_position" value="700,250,-700"/>
+		</action>
+		
+		<action class="Teleport">
+			<requirement class="VarInt">
+				<property name="operation" value="Equals"/>
+				<property name="var_name" value="roll_teleport_varint"/>
+				<property name="value" value="56"/>
+			</requirement>
+			<property name="phase" value="2"/>
+			<property name="target_position" value="-700,250,700"/>
+		</action>
+		
+		<action class="Teleport">
+			<requirement class="VarInt">
+				<property name="operation" value="Equals"/>
+				<property name="var_name" value="roll_teleport_varint"/>
+				<property name="value" value="57"/>
+			</requirement>
+			<property name="phase" value="2"/>
+			<property name="target_position" value="750,250,750"/>
+		</action>
+		
+		<action class="Teleport">
+			<requirement class="VarInt">
+				<property name="operation" value="Equals"/>
+				<property name="var_name" value="roll_teleport_varint"/>
+				<property name="value" value="58"/>
+			</requirement>
+			<property name="phase" value="2"/>
+			<property name="target_position" value="-750,250,-750"/>
+		</action>
+		
+		<action class="Teleport">
+			<requirement class="VarInt">
+				<property name="operation" value="Equals"/>
+				<property name="var_name" value="roll_teleport_varint"/>
+				<property name="value" value="59"/>
+			</requirement>
+			<property name="phase" value="2"/>
+			<property name="target_position" value="750,250,-750"/>
+		</action>
+		
+		<action class="Teleport">
+			<requirement class="VarInt">
+				<property name="operation" value="Equals"/>
+				<property name="var_name" value="roll_teleport_varint"/>
+				<property name="value" value="60"/>
+			</requirement>
+			<property name="phase" value="2"/>
+			<property name="target_position" value="-750,250,750"/>
+		</action>
+		
+		<action class="Teleport">
+			<requirement class="VarInt">
+				<property name="operation" value="Equals"/>
+				<property name="var_name" value="roll_teleport_varint"/>
+				<property name="value" value="61"/>
+			</requirement>
+			<property name="phase" value="2"/>
+			<property name="target_position" value="800,250,800"/>
+		</action>
+		
+		<action class="Teleport">
+			<requirement class="VarInt">
+				<property name="operation" value="Equals"/>
+				<property name="var_name" value="roll_teleport_varint"/>
+				<property name="value" value="62"/>
+			</requirement>
+			<property name="phase" value="2"/>
+			<property name="target_position" value="-800,250,-800"/>
+		</action>
+		
+		<action class="Teleport">
+			<requirement class="VarInt">
+				<property name="operation" value="Equals"/>
+				<property name="var_name" value="roll_teleport_varint"/>
+				<property name="value" value="63"/>
+			</requirement>
+			<property name="phase" value="2"/>
+			<property name="target_position" value="800,250,-800"/>
+		</action>
+		
+		<action class="Teleport">
+			<requirement class="VarInt">
+				<property name="operation" value="Equals"/>
+				<property name="var_name" value="roll_teleport_varint"/>
+				<property name="value" value="64"/>
+			</requirement>
+			<property name="phase" value="2"/>
+			<property name="target_position" value="-800,250,800"/>
+		</action>
+		
+		<action class="Teleport">
+			<requirement class="VarInt">
+				<property name="operation" value="Equals"/>
+				<property name="var_name" value="roll_teleport_varint"/>
+				<property name="value" value="65"/>
+			</requirement>
+			<property name="phase" value="2"/>
+			<property name="target_position" value="850,250,850"/>
+		</action>
+		
+		<action class="Teleport">
+			<requirement class="VarInt">
+				<property name="operation" value="Equals"/>
+				<property name="var_name" value="roll_teleport_varint"/>
+				<property name="value" value="66"/>
+			</requirement>
+			<property name="phase" value="2"/>
+			<property name="target_position" value="-850,250,-850"/>
+		</action>
+		
+		<action class="Teleport">
+			<requirement class="VarInt">
+				<property name="operation" value="Equals"/>
+				<property name="var_name" value="roll_teleport_varint"/>
+				<property name="value" value="67"/>
+			</requirement>
+			<property name="phase" value="2"/>
+			<property name="target_position" value="850,250,-850"/>
+		</action>
+		
+		<action class="Teleport">
+			<requirement class="VarInt">
+				<property name="operation" value="Equals"/>
+				<property name="var_name" value="roll_teleport_varint"/>
+				<property name="value" value="68"/>
+			</requirement>
+			<property name="phase" value="2"/>
+			<property name="target_position" value="-850,250,850"/>
+		</action>
+
+		<action class="Teleport">
+			<requirement class="VarInt">
+				<property name="operation" value="Equals"/>
+				<property name="var_name" value="roll_teleport_varint"/>
+				<property name="value" value="69"/>
+			</requirement>
+			<property name="phase" value="2"/>
+			<property name="target_position" value="900,250,900"/>
+		</action>
+		
+		<action class="Teleport">
+			<requirement class="VarInt">
+				<property name="operation" value="Equals"/>
+				<property name="var_name" value="roll_teleport_varint"/>
+				<property name="value" value="70"/>
+			</requirement>
+			<property name="phase" value="2"/>
+			<property name="target_position" value="-900,250,-900"/>
+		</action>
+		
+		<action class="Teleport">
+			<requirement class="VarInt">
+				<property name="operation" value="Equals"/>
+				<property name="var_name" value="roll_teleport_varint"/>
+				<property name="value" value="71"/>
+			</requirement>
+			<property name="phase" value="2"/>
+			<property name="target_position" value="900,250,-900"/>
+		</action>
+		
+		<action class="Teleport">
+			<requirement class="VarInt">
+				<property name="operation" value="Equals"/>
+				<property name="var_name" value="roll_teleport_varint"/>
+				<property name="value" value="72"/>
+			</requirement>
+			<property name="phase" value="2"/>
+			<property name="target_position" value="-900,250,900"/>
+		</action>
+		
+		<action class="Teleport">
+			<requirement class="VarInt">
+				<property name="operation" value="Equals"/>
+				<property name="var_name" value="roll_teleport_varint"/>
+				<property name="value" value="73"/>
+			</requirement>
+			<property name="phase" value="2"/>
+			<property name="target_position" value="950,250,950"/>
+		</action>
+		
+		<action class="Teleport">
+			<requirement class="VarInt">
+				<property name="operation" value="Equals"/>
+				<property name="var_name" value="roll_teleport_varint"/>
+				<property name="value" value="74"/>
+			</requirement>
+			<property name="phase" value="2"/>
+			<property name="target_position" value="-950,250,-950"/>
+		</action>
+		
+		<action class="Teleport">
+			<requirement class="VarInt">
+				<property name="operation" value="Equals"/>
+				<property name="var_name" value="roll_teleport_varint"/>
+				<property name="value" value="75"/>
+			</requirement>
+			<property name="phase" value="2"/>
+			<property name="target_position" value="950,250,-950"/>
+		</action>
+		
+		<action class="Teleport">
+			<requirement class="VarInt">
+				<property name="operation" value="Equals"/>
+				<property name="var_name" value="roll_teleport_varint"/>
+				<property name="value" value="76"/>
+			</requirement>
+			<property name="phase" value="2"/>
+			<property name="target_position" value="-950,250,950"/>
+		</action>
+		
+		<action class="Teleport">
+			<requirement class="VarInt">
+				<property name="operation" value="Equals"/>
+				<property name="var_name" value="roll_teleport_varint"/>
+				<property name="value" value="77"/>
+			</requirement>
+			<property name="phase" value="2"/>
+			<property name="target_position" value="1000,250,1000"/>
+		</action>
+		
+		<action class="Teleport">
+			<requirement class="VarInt">
+				<property name="operation" value="Equals"/>
+				<property name="var_name" value="roll_teleport_varint"/>
+				<property name="value" value="78"/>
+			</requirement>
+			<property name="phase" value="2"/>
+			<property name="target_position" value="-1000,250,-1000"/>
+		</action>
+		
+		<action class="Teleport">
+			<requirement class="VarInt">
+				<property name="operation" value="Equals"/>
+				<property name="var_name" value="roll_teleport_varint"/>
+				<property name="value" value="79"/>
+			</requirement>
+			<property name="phase" value="2"/>
+			<property name="target_position" value="1000,250,-1000"/>
+		</action>
+		
+		<action class="Teleport">
+			<requirement class="VarInt">
+				<property name="operation" value="Equals"/>
+				<property name="var_name" value="roll_teleport_varint"/>
+				<property name="value" value="80"/>
+			</requirement>
+			<property name="phase" value="2"/>
+			<property name="target_position" value="-1000,250,1000"/>
+		</action>
+		
+		<action class="Delay">
+			<property name="phase" value="3"/>
+			<property name="time" value="8"/>
+		</action>
+		
+		<action class="BeltTooltip">
+			<property name="phase" value="4"/>
+			<property name="text_key" value="quest_newJourneyMissionary2G"/>
+		</action>
+
+		<action class="BeltTooltip">
+			<property name="phase" value="4"/>
+			<property name="text_key" value="quest_newJourneyMissionary3G"/>
+		</action>
+		
+		<action class="BeltTooltip">
+			<property name="phase" value="4"/>
+			<property name="text_key" value="quest_newJourneyMissionary4G"/>
+		</action>
+
+		<action class="Delay">
+			<property name="phase" value="4"/>
+			<property name="time" value="10"/>
+		</action>
+
+		<action class="SetScreenEffect">
+			<property name="phase" value="5"/>
+			<property name="screen_effect" value="FadeToBlack"/>
+			<property name="intensity" value="0"/>
+			<property name="fade_time" value="1"/>
+		</action>
+			
+		<action class="BeltTooltip">
+			<property name="phase" value="6"/>
+			<property name="text_key" value="quest_newJourneyMissionary5G"/>
+		</action>
+
+		<action class="Delay">
+			<property name="phase" value="7"/>
+			<property name="time" value="1"/>
+		</action>
+
+		<action class="ModifyEntityStat">
+			<property name="phase" value="8"/>
+			<property name="stat" value="Health"/>
+			<property name="operation" value="SetMax"/>
+		</action>
+
+		<action class="ModifyEntityStat">
+			<property name="phase" value="8"/>
+			<property name="stat" value="Stamina"/>
+			<property name="operation" value="SetMax"/>
+		</action>
+	</decision>
+	<decision class="If">
+		<requirement class="HasBuff">
+			<property name="buff_name" value="buffInfectedMissionaryG"/>
+		</requirement>
+		
+		<action class="BeltTooltip">
+			<property name="text_key" value="quest_warningInfectedMissionaryG"/>
+		</action>
+		
+		<action class="AddBuff">
+			<property name="buff_name" value="buffBurningMolotov"/>
+		</action>
+	</decision>
+
+</action_sequence>
+
+<action_sequence name="action_rollcacheG">	
+	
+	<decision class="If">
+		<requirement class="HasBuff">
+			<property name="buff_name" value="buffInfectedMissionaryG"/>
+		</requirement>
+		
+		<action class="BeltTooltip">
+			<property name="text_key" value="quest_warningInfectedMissionaryG"/>
+		</action>
+		
+		<action class="AddBuff">
+			<property name="buff_name" value="buffBurningMolotov"/>
+		</action>
+	</decision>
+	
+	<decision class="If">
+		<requirement class="HasBuff">
+			<property name="buff_name" value="buffInfectedMissionaryG"/>
+			<property name="invert" value="true"/>
+		</requirement>
+		
+		<action class="ModifyVarInt">
+			<property name="phase" value="1"/>
+			<property name="var_name" value="roll_cache_varint"/>
+			<property name="value" value="1-800"/>
+		</action>
+		
+		<action class="ReplaceItems">
+			<property name="phase" value="2"/>
+			<requirement class="VarInt">
+				<property name="operation" value="GTE"/>
+				<property name="var_name" value="roll_cache_varint"/>
+				<property name="value" value="1"/>
+			</requirement>
+			<requirement class="VarInt">
+				<property name="operation" value="LTE"/>
+				<property name="var_name" value="roll_cache_varint"/>
+				<property name="value" value="55"/>
+			</requirement>
+			<property name="items_location" value="Held"/>
+			<property name="replaced_by_item" value="ammoBundleBlessedArrowMissionaryG"/>
+			<property name="items_tags" value="blessed_items"/>
+			<property name="count" value="1"/>
+		</action>
+		
+		<action class="ReplaceItems">
+			<property name="phase" value="2"/>
+			<requirement class="VarInt">
+				<property name="operation" value="GTE"/>
+				<property name="var_name" value="roll_cache_varint"/>
+				<property name="value" value="56"/>
+			</requirement>
+			<requirement class="VarInt">
+				<property name="operation" value="LTE"/>
+				<property name="var_name" value="roll_cache_varint"/>
+				<property name="value" value="110"/>
+			</requirement>
+			<property name="items_location" value="Held"/>
+			<property name="replaced_by_item" value="ammoBundleBlessedBoltMissionaryG"/>
+			<property name="items_tags" value="blessed_items"/>
+			<property name="count" value="1"/>
+		</action>
+			
+		<action class="ReplaceItems">
+			<property name="phase" value="2"/>
+			<requirement class="VarInt">
+				<property name="operation" value="GTE"/>
+				<property name="var_name" value="roll_cache_varint"/>
+				<property name="value" value="111"/>
+			</requirement>
+			<requirement class="VarInt">
+				<property name="operation" value="LTE"/>
+				<property name="var_name" value="roll_cache_varint"/>
+				<property name="value" value="165"/>
+			</requirement>
+			<property name="items_location" value="Held"/>
+			<property name="replaced_by_item" value="ammoBundle9mmBulletBallMissionaryG"/>
+			<property name="items_tags" value="blessed_items"/>
+			<property name="count" value="1"/>
+		</action>
+		
+		<action class="ReplaceItems">
+			<property name="phase" value="2"/>
+			<requirement class="VarInt">
+				<property name="operation" value="GTE"/>
+				<property name="var_name" value="roll_cache_varint"/>
+				<property name="value" value="166"/>
+			</requirement>
+			<requirement class="VarInt">
+				<property name="operation" value="LTE"/>
+				<property name="var_name" value="roll_cache_varint"/>
+				<property name="value" value="220"/>
+			</requirement>
+			<property name="items_location" value="Held"/>
+			<property name="replaced_by_item" value="ammoBundleShotgunShellMissionaryG"/>
+			<property name="items_tags" value="blessed_items"/>
+			<property name="count" value="1"/>
+		</action>
+		
+		<action class="ReplaceItems">
+			<property name="phase" value="2"/>
+			<requirement class="VarInt">
+				<property name="operation" value="GTE"/>
+				<property name="var_name" value="roll_cache_varint"/>
+				<property name="value" value="221"/>
+			</requirement>
+			<requirement class="VarInt">
+				<property name="operation" value="LTE"/>
+				<property name="var_name" value="roll_cache_varint"/>
+				<property name="value" value="275"/>
+			</requirement>
+			<property name="items_location" value="Held"/>
+			<property name="replaced_by_item" value="ammoBundle44mmBulletBallMissionaryG"/>
+			<property name="items_tags" value="blessed_items"/>
+			<property name="count" value="1"/>
+		</action>
+		
+		<action class="ReplaceItems">
+			<property name="phase" value="2"/>
+			<requirement class="VarInt">
+				<property name="operation" value="GTE"/>
+				<property name="var_name" value="roll_cache_varint"/>
+				<property name="value" value="276"/>
+			</requirement>
+			<requirement class="VarInt">
+				<property name="operation" value="LTE"/>
+				<property name="var_name" value="roll_cache_varint"/>
+				<property name="value" value="330"/>
+			</requirement>
+			<property name="items_location" value="Held"/>
+			<property name="replaced_by_item" value="ammoBundle762mmBulletBallMissionaryG"/>
+			<property name="items_tags" value="blessed_items"/>
+			<property name="count" value="1"/>
+		</action>
+		
+		<action class="ReplaceItems">
+			<property name="phase" value="2"/>
+			<requirement class="VarInt">
+				<property name="operation" value="GTE"/>
+				<property name="var_name" value="roll_cache_varint"/>
+				<property name="value" value="331"/>
+			</requirement>
+			<requirement class="VarInt">
+				<property name="operation" value="LTE"/>
+				<property name="var_name" value="roll_cache_varint"/>
+				<property name="value" value="385"/>
+			</requirement>
+			<property name="items_location" value="Held"/>
+			<property name="replaced_by_item" value="ammoBundleGasCanMissionaryG"/>
+			<property name="items_tags" value="blessed_items"/>
+			<property name="count" value="1"/>
+		</action>
+		
+		<action class="ReplaceItems">
+			<property name="phase" value="2"/>
+			<requirement class="VarInt">
+				<property name="operation" value="GTE"/>
+				<property name="var_name" value="roll_cache_varint"/>
+				<property name="value" value="386"/>
+			</requirement>
+			<requirement class="VarInt">
+				<property name="operation" value="LTE"/>
+				<property name="var_name" value="roll_cache_varint"/>
+				<property name="value" value="440"/>
+			</requirement>
+			<property name="items_location" value="Held"/>
+			<property name="replaced_by_item" value="resourceBundleNailMissionaryG"/>
+			<property name="items_tags" value="blessed_items"/>
+			<property name="count" value="1"/>
+		</action>
+		
+		<action class="ReplaceItems">
+			<property name="phase" value="2"/>
+			<requirement class="VarInt">
+				<property name="operation" value="GTE"/>
+				<property name="var_name" value="roll_cache_varint"/>
+				<property name="value" value="441"/>
+			</requirement>
+			<requirement class="VarInt">
+				<property name="operation" value="LTE"/>
+				<property name="var_name" value="roll_cache_varint"/>
+				<property name="value" value="495"/>
+			</requirement>
+			<property name="items_location" value="Held"/>
+			<property name="replaced_by_item" value="ammoBundleTurretMissionaryG"/>
+			<property name="items_tags" value="blessed_items"/>
+			<property name="count" value="1"/>
+		</action>
+		
+		<action class="ReplaceItems">
+			<property name="phase" value="2"/>
+			<requirement class="VarInt">
+				<property name="operation" value="GTE"/>
+				<property name="var_name" value="roll_cache_varint"/>
+				<property name="value" value="496"/>
+			</requirement>
+			<requirement class="VarInt">
+				<property name="operation" value="LTE"/>
+				<property name="var_name" value="roll_cache_varint"/>
+				<property name="value" value="550"/>
+			</requirement>
+			<property name="items_location" value="Held"/>
+			<property name="replaced_by_item" value="silverBundleShapesMissionaryG"/>
+			<property name="items_tags" value="blessed_items"/>
+			<property name="count" value="1"/>
+		</action>
+		
+		<action class="ReplaceItems">
+			<property name="phase" value="2"/>
+			<requirement class="VarInt">
+				<property name="operation" value="GTE"/>
+				<property name="var_name" value="roll_cache_varint"/>
+				<property name="value" value="551"/>
+			</requirement>
+			<requirement class="VarInt">
+				<property name="operation" value="LTE"/>
+				<property name="var_name" value="roll_cache_varint"/>
+				<property name="value" value="558"/>
+			</requirement>
+			<property name="items_location" value="Held"/>
+			<property name="replaced_by_item" value="meleeSteelClubMissionaryG"/>
+			<property name="items_tags" value="blessed_items"/>
+			<property name="count" value="1"/>
+		</action>
+		
+		<action class="ReplaceItems">
+			<property name="phase" value="2"/>
+			<requirement class="VarInt">
+				<property name="operation" value="GTE"/>
+				<property name="var_name" value="roll_cache_varint"/>
+				<property name="value" value="559"/>
+			</requirement>
+			<requirement class="VarInt">
+				<property name="operation" value="LTE"/>
+				<property name="var_name" value="roll_cache_varint"/>
+				<property name="value" value="566"/>
+			</requirement>
+			<property name="items_location" value="Held"/>
+			<property name="replaced_by_item" value="meleeSteelSledgehammerMissionaryG"/>
+			<property name="items_tags" value="blessed_items"/>
+			<property name="count" value="1"/>
+		</action>
+		
+		<action class="ReplaceItems">
+			<property name="phase" value="2"/>
+			<requirement class="VarInt">
+				<property name="operation" value="GTE"/>
+				<property name="var_name" value="roll_cache_varint"/>
+				<property name="value" value="567"/>
+			</requirement>
+			<requirement class="VarInt">
+				<property name="operation" value="LTE"/>
+				<property name="var_name" value="roll_cache_varint"/>
+				<property name="value" value="574"/>
+			</requirement>
+			<property name="items_location" value="Held"/>
+			<property name="replaced_by_item" value="meleeStunBatonMissionaryG"/>
+			<property name="items_tags" value="blessed_items"/>
+			<property name="count" value="1"/>
+		</action>
+		
+		<action class="ReplaceItems">
+			<property name="phase" value="2"/>
+			<requirement class="VarInt">
+				<property name="operation" value="GTE"/>
+				<property name="var_name" value="roll_cache_varint"/>
+				<property name="value" value="575"/>
+			</requirement>
+			<requirement class="VarInt">
+				<property name="operation" value="LTE"/>
+				<property name="var_name" value="roll_cache_varint"/>
+				<property name="value" value="582"/>
+			</requirement>
+			<property name="items_location" value="Held"/>
+			<property name="replaced_by_item" value="meleeSteelSpearMissionaryG"/>
+			<property name="items_tags" value="blessed_items"/>
+			<property name="count" value="1"/>
+		</action>
+		
+		<action class="ReplaceItems">
+			<property name="phase" value="2"/>
+			<requirement class="VarInt">
+				<property name="operation" value="GTE"/>
+				<property name="var_name" value="roll_cache_varint"/>
+				<property name="value" value="583"/>
+			</requirement>
+			<requirement class="VarInt">
+				<property name="operation" value="LTE"/>
+				<property name="var_name" value="roll_cache_varint"/>
+				<property name="value" value="590"/>
+			</requirement>
+			<property name="items_location" value="Held"/>
+			<property name="replaced_by_item" value="meleeSteelKnucklesMissionaryG"/>
+			<property name="items_tags" value="blessed_items"/>
+			<property name="count" value="1"/>
+		</action>
+		
+		<action class="ReplaceItems">
+			<property name="phase" value="2"/>
+			<requirement class="VarInt">
+				<property name="operation" value="GTE"/>
+				<property name="var_name" value="roll_cache_varint"/>
+				<property name="value" value="591"/>
+			</requirement>
+			<requirement class="VarInt">
+				<property name="operation" value="LTE"/>
+				<property name="var_name" value="roll_cache_varint"/>
+				<property name="value" value="598"/>
+			</requirement>
+			<property name="items_location" value="Held"/>
+			<property name="replaced_by_item" value="meleeHuntingKnifeMissionaryG"/>
+			<property name="items_tags" value="blessed_items"/>
+			<property name="count" value="1"/>
+		</action>
+		
+		<action class="ReplaceItems">
+			<property name="phase" value="2"/>
+			<requirement class="VarInt">
+				<property name="operation" value="GTE"/>
+				<property name="var_name" value="roll_cache_varint"/>
+				<property name="value" value="599"/>
+			</requirement>
+			<requirement class="VarInt">
+				<property name="operation" value="LTE"/>
+				<property name="var_name" value="roll_cache_varint"/>
+				<property name="value" value="606"/>
+			</requirement>
+			<property name="items_location" value="Held"/>
+			<property name="replaced_by_item" value="meleeMacheteMissionaryG"/>
+			<property name="items_tags" value="blessed_items"/>
+			<property name="count" value="1"/>
+		</action>
+		
+		<action class="ReplaceItems">
+			<property name="phase" value="2"/>
+			<requirement class="VarInt">
+				<property name="operation" value="GTE"/>
+				<property name="var_name" value="roll_cache_varint"/>
+				<property name="value" value="607"/>
+			</requirement>
+			<requirement class="VarInt">
+				<property name="operation" value="LTE"/>
+				<property name="var_name" value="roll_cache_varint"/>
+				<property name="value" value="614"/>
+			</requirement>
+			<property name="items_location" value="Held"/>
+			<property name="replaced_by_item" value="meleeNailgunMissionaryG"/>
+			<property name="items_tags" value="blessed_items"/>
+			<property name="count" value="1"/>
+		</action>
+		
+		<action class="ReplaceItems">
+			<property name="phase" value="2"/>
+			<requirement class="VarInt">
+				<property name="operation" value="GTE"/>
+				<property name="var_name" value="roll_cache_varint"/>
+				<property name="value" value="615"/>
+			</requirement>
+			<requirement class="VarInt">
+				<property name="operation" value="LTE"/>
+				<property name="var_name" value="roll_cache_varint"/>
+				<property name="value" value="622"/>
+			</requirement>
+			<property name="items_location" value="Held"/>
+			<property name="replaced_by_item" value="meleeChainsawMissionaryG"/>
+			<property name="items_tags" value="blessed_items"/>
+			<property name="count" value="1"/>
+		</action>
+		
+		<action class="ReplaceItems">
+			<property name="phase" value="2"/>
+			<requirement class="VarInt">
+				<property name="operation" value="GTE"/>
+				<property name="var_name" value="roll_cache_varint"/>
+				<property name="value" value="623"/>
+			</requirement>
+			<requirement class="VarInt">
+				<property name="operation" value="LTE"/>
+				<property name="var_name" value="roll_cache_varint"/>
+				<property name="value" value="630"/>
+			</requirement>
+			<property name="items_location" value="Held"/>
+			<property name="replaced_by_item" value="meleeAugerMissionaryG"/>
+			<property name="items_tags" value="blessed_items"/>
+			<property name="count" value="1"/>
+		</action>
+		
+		<action class="ReplaceItems">
+			<property name="phase" value="2"/>
+			<requirement class="VarInt">
+				<property name="operation" value="GTE"/>
+				<property name="var_name" value="roll_cache_varint"/>
+				<property name="value" value="631"/>
+			</requirement>
+			<requirement class="VarInt">
+				<property name="operation" value="LTE"/>
+				<property name="var_name" value="roll_cache_varint"/>
+				<property name="value" value="638"/>
+			</requirement>
+			<property name="items_location" value="Held"/>
+			<property name="replaced_by_item" value="armorBlessedHelmetMissionaryG"/>
+			<property name="items_tags" value="blessed_items"/>
+			<property name="count" value="1"/>
+		</action>
+		
+		<action class="ReplaceItems">
+			<property name="phase" value="2"/>
+			<requirement class="VarInt">
+				<property name="operation" value="GTE"/>
+				<property name="var_name" value="roll_cache_varint"/>
+				<property name="value" value="639"/>
+			</requirement>
+			<requirement class="VarInt">
+				<property name="operation" value="LTE"/>
+				<property name="var_name" value="roll_cache_varint"/>
+				<property name="value" value="646"/>
+			</requirement>
+			<property name="items_location" value="Held"/>
+			<property name="replaced_by_item" value="armorBlessedOutfitMissionaryG"/>
+			<property name="items_tags" value="blessed_items"/>
+			<property name="count" value="1"/>
+		</action>
+		
+		<action class="ReplaceItems">
+			<property name="phase" value="2"/>
+			<requirement class="VarInt">
+				<property name="operation" value="GTE"/>
+				<property name="var_name" value="roll_cache_varint"/>
+				<property name="value" value="647"/>
+			</requirement>
+			<requirement class="VarInt">
+				<property name="operation" value="LTE"/>
+				<property name="var_name" value="roll_cache_varint"/>
+				<property name="value" value="654"/>
+			</requirement>
+			<property name="items_location" value="Held"/>
+			<property name="replaced_by_item" value="armorBlessedGlovesMissionaryG"/>
+			<property name="items_tags" value="blessed_items"/>
+			<property name="count" value="1"/>
+		</action>
+		
+		<action class="ReplaceItems">
+			<property name="phase" value="2"/>
+			<requirement class="VarInt">
+				<property name="operation" value="GTE"/>
+				<property name="var_name" value="roll_cache_varint"/>
+				<property name="value" value="655"/>
+			</requirement>
+			<requirement class="VarInt">
+				<property name="operation" value="LTE"/>
+				<property name="var_name" value="roll_cache_varint"/>
+				<property name="value" value="662"/>
+			</requirement>
+			<property name="items_location" value="Held"/>
+			<property name="replaced_by_item" value="armorBlessedBootsMissionaryG"/>
+			<property name="items_tags" value="blessed_items"/>
+			<property name="count" value="1"/>
+		</action>
+		
+		<action class="ReplaceItems">
+			<property name="phase" value="2"/>
+			<requirement class="VarInt">
+				<property name="operation" value="GTE"/>
+				<property name="var_name" value="roll_cache_varint"/>
+				<property name="value" value="663"/>
+			</requirement>
+			<requirement class="VarInt">
+				<property name="operation" value="LTE"/>
+				<property name="var_name" value="roll_cache_varint"/>
+				<property name="value" value="670"/>
+			</requirement>
+			<property name="items_location" value="Held"/>
+			<property name="replaced_by_item" value="gunBowMissionaryG"/>
+			<property name="items_tags" value="blessed_items"/>
+			<property name="count" value="1"/>
+		</action>
+		
+		<action class="ReplaceItems">
+			<property name="phase" value="2"/>
+			<requirement class="VarInt">
+				<property name="operation" value="GTE"/>
+				<property name="var_name" value="roll_cache_varint"/>
+				<property name="value" value="671"/>
+			</requirement>
+			<requirement class="VarInt">
+				<property name="operation" value="LTE"/>
+				<property name="var_name" value="roll_cache_varint"/>
+				<property name="value" value="678"/>
+			</requirement>
+			<property name="items_location" value="Held"/>
+			<property name="replaced_by_item" value="gunCrossbowMissionaryG"/>
+			<property name="items_tags" value="blessed_items"/>
+			<property name="count" value="1"/>
+		</action>
+		
+		<action class="ReplaceItems">
+			<property name="phase" value="2"/>
+			<requirement class="VarInt">
+				<property name="operation" value="GTE"/>
+				<property name="var_name" value="roll_cache_varint"/>
+				<property name="value" value="679"/>
+			</requirement>
+			<requirement class="VarInt">
+				<property name="operation" value="LTE"/>
+				<property name="var_name" value="roll_cache_varint"/>
+				<property name="value" value="686"/>
+			</requirement>
+			<property name="items_location" value="Held"/>
+			<property name="replaced_by_item" value="gunPistolMissionaryG"/>
+			<property name="items_tags" value="blessed_items"/>
+			<property name="count" value="1"/>
+		</action>
+		
+		<action class="ReplaceItems">
+			<property name="phase" value="2"/>
+			<requirement class="VarInt">
+				<property name="operation" value="GTE"/>
+				<property name="var_name" value="roll_cache_varint"/>
+				<property name="value" value="687"/>
+			</requirement>
+			<requirement class="VarInt">
+				<property name="operation" value="LTE"/>
+				<property name="var_name" value="roll_cache_varint"/>
+				<property name="value" value="694"/>
+			</requirement>
+			<property name="items_location" value="Held"/>
+			<property name="replaced_by_item" value="gunSMGMissionaryG"/>
+			<property name="items_tags" value="blessed_items"/>
+			<property name="count" value="1"/>
+		</action>
+		
+		<action class="ReplaceItems">
+			<property name="phase" value="2"/>
+			<requirement class="VarInt">
+				<property name="operation" value="GTE"/>
+				<property name="var_name" value="roll_cache_varint"/>
+				<property name="value" value="695"/>
+			</requirement>
+			<requirement class="VarInt">
+				<property name="operation" value="LTE"/>
+				<property name="var_name" value="roll_cache_varint"/>
+				<property name="value" value="702"/>
+			</requirement>
+			<property name="items_location" value="Held"/>
+			<property name="replaced_by_item" value="gunMagnumMissionaryG"/>
+			<property name="items_tags" value="blessed_items"/>
+			<property name="count" value="1"/>
+		</action>
+		
+		<action class="ReplaceItems">
+			<property name="phase" value="2"/>
+			<requirement class="VarInt">
+				<property name="operation" value="GTE"/>
+				<property name="var_name" value="roll_cache_varint"/>
+				<property name="value" value="703"/>
+			</requirement>
+			<requirement class="VarInt">
+				<property name="operation" value="LTE"/>
+				<property name="var_name" value="roll_cache_varint"/>
+				<property name="value" value="710"/>
+			</requirement>
+			<property name="items_location" value="Held"/>
+			<property name="replaced_by_item" value="gunDesertVultureMissionaryG"/>
+			<property name="items_tags" value="blessed_items"/>
+			<property name="count" value="1"/>
+		</action>
+		
+		<action class="ReplaceItems">
+			<property name="phase" value="2"/>
+			<requirement class="VarInt">
+				<property name="operation" value="GTE"/>
+				<property name="var_name" value="roll_cache_varint"/>
+				<property name="value" value="711"/>
+			</requirement>
+			<requirement class="VarInt">
+				<property name="operation" value="LTE"/>
+				<property name="var_name" value="roll_cache_varint"/>
+				<property name="value" value="718"/>
+			</requirement>
+			<property name="items_location" value="Held"/>
+			<property name="replaced_by_item" value="gunPumpShotgunMissionaryG"/>
+			<property name="items_tags" value="blessed_items"/>
+			<property name="count" value="1"/>
+		</action>
+		
+		<action class="ReplaceItems">
+			<property name="phase" value="2"/>
+			<requirement class="VarInt">
+				<property name="operation" value="GTE"/>
+				<property name="var_name" value="roll_cache_varint"/>
+				<property name="value" value="719"/>
+			</requirement>
+			<requirement class="VarInt">
+				<property name="operation" value="LTE"/>
+				<property name="var_name" value="roll_cache_varint"/>
+				<property name="value" value="726"/>
+			</requirement>
+			<property name="items_location" value="Held"/>
+			<property name="replaced_by_item" value="gunAutoShotgunMissionaryG"/>
+			<property name="items_tags" value="blessed_items"/>
+			<property name="count" value="1"/>
+		</action>
+		
+		<action class="ReplaceItems">
+			<property name="phase" value="2"/>
+			<requirement class="VarInt">
+				<property name="operation" value="GTE"/>
+				<property name="var_name" value="roll_cache_varint"/>
+				<property name="value" value="727"/>
+			</requirement>
+			<requirement class="VarInt">
+				<property name="operation" value="LTE"/>
+				<property name="var_name" value="roll_cache_varint"/>
+				<property name="value" value="734"/>
+			</requirement>
+			<property name="items_location" value="Held"/>
+			<property name="replaced_by_item" value="gunHuntingRifleMissionaryG"/>
+			<property name="items_tags" value="blessed_items"/>
+			<property name="count" value="1"/>
+		</action>
+		
+		<action class="ReplaceItems">
+			<property name="phase" value="2"/>
+			<requirement class="VarInt">
+				<property name="operation" value="GTE"/>
+				<property name="var_name" value="roll_cache_varint"/>
+				<property name="value" value="735"/>
+			</requirement>
+			<requirement class="VarInt">
+				<property name="operation" value="LTE"/>
+				<property name="var_name" value="roll_cache_varint"/>
+				<property name="value" value="742"/>
+			</requirement>
+			<property name="items_location" value="Held"/>
+			<property name="replaced_by_item" value="gunLeverActionRifleMissionaryG"/>
+			<property name="items_tags" value="blessed_items"/>
+			<property name="count" value="1"/>
+		</action>
+		
+		<action class="ReplaceItems">
+			<property name="phase" value="2"/>
+			<requirement class="VarInt">
+				<property name="operation" value="GTE"/>
+				<property name="var_name" value="roll_cache_varint"/>
+				<property name="value" value="743"/>
+			</requirement>
+			<requirement class="VarInt">
+				<property name="operation" value="LTE"/>
+				<property name="var_name" value="roll_cache_varint"/>
+				<property name="value" value="750"/>
+			</requirement>
+			<property name="items_location" value="Held"/>
+			<property name="replaced_by_item" value="gunSniperRifleMissionaryG"/>
+			<property name="items_tags" value="blessed_items"/>
+			<property name="count" value="1"/>
+		</action>
+		
+		<action class="ReplaceItems">
+			<property name="phase" value="2"/>
+			<requirement class="VarInt">
+				<property name="operation" value="GTE"/>
+				<property name="var_name" value="roll_cache_varint"/>
+				<property name="value" value="751"/>
+			</requirement>
+			<requirement class="VarInt">
+				<property name="operation" value="LTE"/>
+				<property name="var_name" value="roll_cache_varint"/>
+				<property name="value" value="758"/>
+			</requirement>
+			<property name="items_location" value="Held"/>
+			<property name="replaced_by_item" value="gunAK47MissionaryG"/>
+			<property name="items_tags" value="blessed_items"/>
+			<property name="count" value="1"/>
+		</action>
+		
+		<action class="ReplaceItems">
+			<property name="phase" value="2"/>
+			<requirement class="VarInt">
+				<property name="operation" value="GTE"/>
+				<property name="var_name" value="roll_cache_varint"/>
+				<property name="value" value="759"/>
+			</requirement>
+			<requirement class="VarInt">
+				<property name="operation" value="LTE"/>
+				<property name="var_name" value="roll_cache_varint"/>
+				<property name="value" value="766"/>
+			</requirement>
+			<property name="items_location" value="Held"/>
+			<property name="replaced_by_item" value="gunTacticalARMissionaryG"/>
+			<property name="items_tags" value="blessed_items"/>
+			<property name="count" value="1"/>
+		</action>
+		
+		<action class="ReplaceItems">
+			<property name="phase" value="2"/>
+			<requirement class="VarInt">
+				<property name="operation" value="GTE"/>
+				<property name="var_name" value="roll_cache_varint"/>
+				<property name="value" value="767"/>
+			</requirement>
+			<requirement class="VarInt">
+				<property name="operation" value="LTE"/>
+				<property name="var_name" value="roll_cache_varint"/>
+				<property name="value" value="774"/>
+			</requirement>
+			<property name="items_location" value="Held"/>
+			<property name="replaced_by_item" value="gunM60MissionaryG"/>
+			<property name="items_tags" value="blessed_items"/>
+			<property name="count" value="1"/>
+		</action>
+		
+		<action class="ReplaceItems">
+			<property name="phase" value="2"/>
+			<requirement class="VarInt">
+				<property name="operation" value="GTE"/>
+				<property name="var_name" value="roll_cache_varint"/>
+				<property name="value" value="775"/>
+			</requirement>
+			<requirement class="VarInt">
+				<property name="operation" value="LTE"/>
+				<property name="var_name" value="roll_cache_varint"/>
+				<property name="value" value="776"/>
+			</requirement>
+			<property name="items_location" value="Held"/>
+			<property name="replaced_by_item" value="gunSledgeMissionaryG"/>
+			<property name="items_tags" value="blessed_items"/>
+			<property name="count" value="1"/>
+		</action>
+		
+		<action class="ReplaceItems">
+			<property name="phase" value="2"/>
+			<requirement class="VarInt">
+				<property name="operation" value="GTE"/>
+				<property name="var_name" value="roll_cache_varint"/>
+				<property name="value" value="777"/>
+			</requirement>
+			<requirement class="VarInt">
+				<property name="operation" value="LTE"/>
+				<property name="var_name" value="roll_cache_varint"/>
+				<property name="value" value="778"/>
+			</requirement>
+			<property name="items_location" value="Held"/>
+			<property name="replaced_by_item" value="gunTurretMissionaryG"/>
+			<property name="items_tags" value="blessed_items"/>
+			<property name="count" value="1"/>
+		</action>
+		
+		<action class="ReplaceItems">
+			<property name="phase" value="2"/>
+			<requirement class="VarInt">
+				<property name="operation" value="GTE"/>
+				<property name="var_name" value="roll_cache_varint"/>
+				<property name="value" value="779"/>
+			</requirement>
+			<requirement class="VarInt">
+				<property name="operation" value="LTE"/>
+				<property name="var_name" value="roll_cache_varint"/>
+				<property name="value" value="780"/>
+			</requirement>
+			<property name="items_location" value="Held"/>
+			<property name="replaced_by_item" value="gunDroneMissionaryG"/>
+			<property name="items_tags" value="blessed_items"/>
+			<property name="count" value="1"/>
+		</action>
+		
+		<action class="ReplaceItems">
+			<property name="phase" value="2"/>
+			<requirement class="VarInt">
+				<property name="operation" value="GTE"/>
+				<property name="var_name" value="roll_cache_varint"/>
+				<property name="value" value="781"/>
+			</requirement>
+			<requirement class="VarInt">
+				<property name="operation" value="LTE"/>
+				<property name="var_name" value="roll_cache_varint"/>
+				<property name="value" value="782"/>
+			</requirement>
+			<property name="items_location" value="Held"/>
+			<property name="replaced_by_item" value="vehicleMinibikeMissionaryG"/>
+			<property name="items_tags" value="blessed_items"/>
+			<property name="count" value="1"/>
+		</action>
+		
+		<action class="ReplaceItems">
+			<property name="phase" value="2"/>
+			<requirement class="VarInt">
+				<property name="operation" value="GTE"/>
+				<property name="var_name" value="roll_cache_varint"/>
+				<property name="value" value="783"/>
+			</requirement>
+			<requirement class="VarInt">
+				<property name="operation" value="LTE"/>
+				<property name="var_name" value="roll_cache_varint"/>
+				<property name="value" value="784"/>
+			</requirement>
+			<property name="items_location" value="Held"/>
+			<property name="replaced_by_item" value="vehicleBicycleMissionaryG"/>
+			<property name="items_tags" value="blessed_items"/>
+			<property name="count" value="1"/>
+		</action>
+		
+		<action class="ReplaceItems">
+			<property name="phase" value="2"/>
+			<requirement class="VarInt">
+				<property name="operation" value="GTE"/>
+				<property name="var_name" value="roll_cache_varint"/>
+				<property name="value" value="785"/>
+			</requirement>
+			<requirement class="VarInt">
+				<property name="operation" value="LTE"/>
+				<property name="var_name" value="roll_cache_varint"/>
+				<property name="value" value="786"/>
+			</requirement>
+			<property name="items_location" value="Held"/>
+			<property name="replaced_by_item" value="vehicleMotorcycleMissionaryG"/>
+			<property name="items_tags" value="blessed_items"/>
+			<property name="count" value="1"/>
+		</action>
+		
+		<action class="ReplaceItems">
+			<property name="phase" value="2"/>
+			<requirement class="VarInt">
+				<property name="operation" value="GTE"/>
+				<property name="var_name" value="roll_cache_varint"/>
+				<property name="value" value="787"/>
+			</requirement>
+			<requirement class="VarInt">
+				<property name="operation" value="LTE"/>
+				<property name="var_name" value="roll_cache_varint"/>
+				<property name="value" value="788"/>
+			</requirement>
+			<property name="items_location" value="Held"/>
+			<property name="replaced_by_item" value="vehicle4x4MissionaryG"/>
+			<property name="items_tags" value="blessed_items"/>
+			<property name="count" value="1"/>
+		</action>
+		
+		<action class="ReplaceItems">
+			<property name="phase" value="2"/>
+			<requirement class="VarInt">
+				<property name="operation" value="GTE"/>
+				<property name="var_name" value="roll_cache_varint"/>
+				<property name="value" value="789"/>
+			</requirement>
+			<requirement class="VarInt">
+				<property name="operation" value="LTE"/>
+				<property name="var_name" value="roll_cache_varint"/>
+				<property name="value" value="790"/>
+			</requirement>
+			<property name="items_location" value="Held"/>
+			<property name="replaced_by_item" value="vehicleGyrocopterMissionaryG"/>
+			<property name="items_tags" value="blessed_items"/>
+			<property name="count" value="1"/>
+		</action>
+		
+		<action class="ReplaceItems">
+			<property name="phase" value="2"/>
+			<requirement class="VarInt">
+				<property name="operation" value="GTE"/>
+				<property name="var_name" value="roll_cache_varint"/>
+				<property name="value" value="791"/>
+			</requirement>
+			<requirement class="VarInt">
+				<property name="operation" value="LTE"/>
+				<property name="var_name" value="roll_cache_varint"/>
+				<property name="value" value="792"/>
+			</requirement>
+			<property name="items_location" value="Held"/>
+			<property name="replaced_by_item" value="meleeCandyKnifeMissionaryG"/>
+			<property name="items_tags" value="blessed_items"/>
+			<property name="count" value="1"/>
+		</action>
+		
+		<action class="ReplaceItems">
+			<property name="phase" value="2"/>
+			<requirement class="VarInt">
+				<property name="operation" value="GTE"/>
+				<property name="var_name" value="roll_cache_varint"/>
+				<property name="value" value="793"/>
+			</requirement>
+			<requirement class="VarInt">
+				<property name="operation" value="LTE"/>
+				<property name="var_name" value="roll_cache_varint"/>
+				<property name="value" value="794"/>
+			</requirement>
+			<property name="items_location" value="Held"/>
+			<property name="replaced_by_item" value="meleeCandyClubMissionaryG"/>
+			<property name="items_tags" value="blessed_items"/>
+			<property name="count" value="1"/>
+		</action>
+		
+		<action class="ReplaceItems">
+			<property name="phase" value="2"/>
+			<requirement class="VarInt">
+				<property name="operation" value="GTE"/>
+				<property name="var_name" value="roll_cache_varint"/>
+				<property name="value" value="795"/>
+			</requirement>
+			<requirement class="VarInt">
+				<property name="operation" value="LTE"/>
+				<property name="var_name" value="roll_cache_varint"/>
+				<property name="value" value="796"/>
+			</requirement>
+			<property name="items_location" value="Held"/>
+			<property name="replaced_by_item" value="flagThick44BlockMissionaryGVariantHelper"/>
+			<property name="items_tags" value="blessed_items"/>
+			<property name="count" value="1"/>
+		</action>
+		
+		<action class="ReplaceItems">
+			<property name="phase" value="2"/>
+			<requirement class="VarInt">
+				<property name="operation" value="GTE"/>
+				<property name="var_name" value="roll_cache_varint"/>
+				<property name="value" value="797"/>
+			</requirement>
+			<requirement class="VarInt">
+				<property name="operation" value="LTE"/>
+				<property name="var_name" value="roll_cache_varint"/>
+				<property name="value" value="798"/>
+			</requirement>
+			<property name="items_location" value="Held"/>
+			<property name="replaced_by_item" value="drinkJarRainbeerMissionaryG"/>
+			<property name="items_tags" value="blessed_items"/>
+			<property name="count" value="1"/>
+		</action>
+		
+		<action class="ReplaceItems">
+			<property name="phase" value="2"/>
+			<requirement class="VarInt">
+				<property name="operation" value="GTE"/>
+				<property name="var_name" value="roll_cache_varint"/>
+				<property name="value" value="799"/>
+			</requirement>
+			<requirement class="VarInt">
+				<property name="operation" value="LTE"/>
+				<property name="var_name" value="roll_cache_varint"/>
+				<property name="value" value="800"/>
+			</requirement>
+			<property name="items_location" value="Held"/>
+			<property name="replaced_by_item" value="meleeTorchMissionaryG"/>
+			<property name="items_tags" value="blessed_items"/>
+			<property name="count" value="1"/>
+		</action>
+	</decision>
+	
+</action_sequence>
+
+<action_sequence name="action_rollplanterG">
+
+	<decision class="If">
+		<requirement class="HasBuff">
+			<property name="buff_name" value="buffInfectedMissionaryG"/>
+		</requirement>
+		
+		<action class="BeltTooltip">
+			<property name="text_key" value="quest_warningInfectedMissionaryG"/>
+		</action>
+		
+		<action class="AddBuff">
+			<property name="buff_name" value="buffBurningMolotov"/>
+		</action>
+	</decision>
+	
+	<decision class="If">
+		<requirement class="HasBuff">
+			<property name="buff_name" value="buffInfectedMissionaryG"/>
+			<property name="invert" value="true"/>
+		</requirement>
+		
+		<action class="ReplaceItems">
+			<property name="items_location" value="Held"/>
+			<property name="replaced_by_item" value="plantMissionaryG"/>
+			<property name="items_tags" value="recyclable_blessed_items"/>
+			<property name="count" value="1"/>
+		</action>
+		
+		<action class="ReplaceItems">
+			<property name="items_location" value="Held"/>
+			<property name="replaced_by_item" value="casinoCoinMissionaryG"/>
+			<property name="items_tags" value="recycled_blessed_items"/>
+			<property name="count" value="1"/>
+		</action>
+	</decision>
+	
+</action_sequence>
+
+<action_sequence name="action_buff44FlagG">
+
+	<action class="AddBuff">	
+		<property name="buff_name" value="buff44FlagBlessingMissionaryG"/>
+	</action>
+	
+</action_sequence>
+
+</append>
+
+</Giuigi>
