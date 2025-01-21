@@ -1,0 +1,5 @@
+<Giuigi>
+
+<csv xpath="/entity_classes/entity_class/property[starts-with(@name,'ItemsOnEnterGame.GameModeSurvival')]/@value" op="Add">noteMissionaryG</csv>
+
+</Giuigi>

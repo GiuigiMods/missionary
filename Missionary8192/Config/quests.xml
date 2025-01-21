@@ -1,0 +1,142 @@
+<Giuigi>
+
+<append xpath="/quests">
+
+<quest id="quest_startMissionaryG">
+	<property name="name_key" value="quest_startMissionaryG"/>
+	<property name="subtitle_key" value="quest_startMissionaryG_subtitle"/>
+	<property name="description_key" value="quest_startMissionaryG_description"/>
+	<property name="icon" value="ui_game_symbol_hammer"/>
+	<property name="category_key" value="quest"/>
+	<property name="add_to_tier_complete" value="false"/>
+	<property name="difficulty_tier" value="0" param1="difficulty"/>
+	<property name="offer_key" value="quest_startMissionaryG_offer"/>
+	<property name="shareable" value="false"/>
+	<property name="repeatable" value="true"/>
+
+	<objective type="Craft">
+	<property name="item" value="cntHolyRelicG"/>
+	<property name="count" value="1"/>
+	</objective>
+	<objective type="Craft">
+	<property name="item" value="cntHolyCacheGBlockVariantHelper"/>
+	<property name="count" value="1"/>
+	</objective>
+	<objective type="Craft">
+	<property name="item" value="planterHolyG"/>
+	<property name="count" value="1"/>
+	</objective>
+	
+	<reward type="Exp" value="0"/>
+</quest>
+
+<quest id="tier2_clear_infested_MissionaryG">
+	<property name="name_key" value="quest_tier2_infested_MissionaryG_clear" param1="name"/>
+	<property name="subtitle_key" value="quest_infestation_MissionaryG_subtitle"/>
+	<property name="description_key" value="quest_tier2_infested_MissionaryG_clear_offer"/>
+	<property name="icon" value="ui_game_symbol_quest"/>
+	<property name="repeatable" value="true"/>
+	<property name="category_key" value="quest"/>
+	<property name="offer_key" value="quest_tier2_infested_MissionaryG_clear_offer" param1="offer"/>
+	<property name="difficulty_tier" value="2" param1="difficulty"/>
+	<property name="statement_key" value="quest_infestation_MissionaryG_statement"/>
+	<property name="response_key" value="quest_infestation_MissionaryG_response"/>
+	<property name="login_rally_reset" value="true"/>
+	<property name="reward_choices_count" value="5"/>
+	<property name="extra_tags" value="infested" param1="extra_tags"/>
+	<property name="shareable" value="true"/>
+	<property name="spawn_multiplier" value="2" param1="spawn_multiplier"/>
+	<property name="gamestage_mod" value=".6" param1="gamestage_mod"/>
+	<property name="gamestage_bonus" value="30" param1="gamestage_bonus"/>
+	<property name="allow_remove" value="false"/>
+
+	<objective type="RandomPOIGoto">
+		<property name="phase" value="1"/>
+		<property name="biome_filter_type" value="AnyBiome" param1="biome_filter_type"/>
+		<property name="biome_filter" value="" param1="biome_filter"/>
+		<property name="nav_object" value="quest"/>
+		<property name="poi_tier" value="1" param1="poi_tier"/>
+	</objective>
+
+	<objective type="RallyPoint">
+		<property name="phase" value="2"/>
+		<property name="nav_object" value="rally"/>
+	</objective>
+
+	<objective type="ClearSleepers">
+		<property name="phase" value="3"/>
+		<property name="nav_object" value="sleeper_volume"/>
+	</objective>
+
+	<action type="UnlockPOI" >
+		<property name="phase" value="4"/>
+	</action>
+
+	<reward type="Exp" value="5625"/>
+	<reward type="Item" id="casinoCoinMissionaryG" value="10"/>
+	<reward type="Item" id="drinkJarHolyWaterMissionaryG" value="1"/>
+</quest>
+	
+<quest id="tier3_clear_infested_MissionaryG" template="tier2_clear_infested_MissionaryG">
+	<variable name="name" value="quest_tier3_infested_MissionaryG_clear"/>
+	<variable name="offer" value="quest_tier3_infested_MissionaryG_clear_offer"/>
+	<variable name="difficulty" value="3"/>
+	<variable name="extra_tags" value="infested"/>
+	<variable name="poi_tier" value="2"/>
+	<variable name="spawn_multiplier" value="2"/>
+	<variable name="gamestage_mod" value=".6"/>
+	<variable name="gamestage_bonus" value="30"/>
+		
+	<reward type="Exp" value="7500"/>
+	<reward type="Item" id="casinoCoinMissionaryG" value="20"/>
+	<reward type="Item" id="drinkJarHolyWaterMissionaryG" value="1"/>
+</quest>
+	
+<quest id="tier4_clear_infested_MissionaryG" template="tier2_clear_infested_MissionaryG">
+	<variable name="name" value="quest_tier4_infested_MissionaryG_clear"/>
+	<variable name="offer" value="quest_tier4_infested_MissionaryG_clear_offer"/>
+	<variable name="difficulty" value="4"/>
+	<variable name="extra_tags" value="infested"/>
+	<variable name="poi_tier" value="3"/>
+	<variable name="spawn_multiplier" value="1.5"/>
+	<variable name="gamestage_mod" value=".6"/>
+	<variable name="gamestage_bonus" value="30"/>
+		
+	<reward type="Exp" value="9375"/>
+	<reward type="Item" id="casinoCoinMissionaryG" value="30"/>
+	<reward type="Item" id="drinkJarHolyWaterMissionaryG" value="1"/>
+</quest>
+	
+<quest id="tier5_clear_infested_MissionaryG" template="tier2_clear_infested_MissionaryG">
+	<variable name="name" value="quest_tier5_infested_MissionaryG_clear"/>
+	<variable name="offer" value="quest_tier5_infested_MissionaryG_clear_offer"/>
+	<variable name="difficulty" value="5"/>
+	<variable name="extra_tags" value="infested"/>
+	<variable name="poi_tier" value="4"/>
+	<variable name="spawn_multiplier" value="1.5"/>
+	<variable name="gamestage_mod" value=".6"/>
+	<variable name="gamestage_bonus" value="30"/>
+		
+	<reward type="Exp" value="18750"/>
+	<reward type="Item" id="casinoCoinMissionaryG" value="40"/>
+	<reward type="Item" id="drinkJarHolyWaterMissionaryG" value="1"/>
+</quest>
+
+<quest id="tier6_clear_infested_MissionaryG" template="tier2_clear_infested_MissionaryG">
+	<variable name="name" value="quest_tier6_infested_MissionaryG_clear"/>
+	<variable name="offer" value="quest_tier6_infested_MissionaryG_clear_offer"/>
+	<variable name="difficulty" value="6"/>
+	<variable name="extra_tags" value="infested"/>
+	<variable name="poi_tier" value="5"/>
+	<variable name="spawn_multiplier" value="1.5"/>
+	<variable name="gamestage_mod" value=".6"/>
+	<variable name="gamestage_bonus" value="30"/>
+		
+	<reward type="Exp" value="30000"/>
+	<reward type="Item" id="casinoCoinMissionaryG" value="50"/>
+	<reward type="Item" id="drinkJarHolyWaterMissionaryG" value="1"/>
+</quest>
+
+</append>
+
+</Giuigi>
