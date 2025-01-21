@@ -1,0 +1,290 @@
+<Giuigi>
+
+<append xpath="/buffs">
+
+<buff name="buffProtectionBlessing7G" name_key="buffProtectionBlessingGName" description_key="buffProtectionBlessingGDesc" icon="ui_game_symbol_add" icon_color="238,221,130" remove_on_death="false">
+	<stack_type value="ignore"/>
+	<duration value="25200"/>
+	<display_value_format value="time"/>
+	<tags value="protection_blessing"/>
+	
+	<effect_group>
+		<triggered_effect trigger="onSelfBuffFinish" action="ModifyStats" stat="Health" operation="subtract" value="99999999"/>
+		<triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="buffInfectedMissionaryG"/>
+	</effect_group>
+</buff>
+
+<buff name="buffProtectionBlessing14G" name_key="buffProtectionBlessingGName" description_key="buffProtectionBlessingGDesc" icon="ui_game_symbol_add" icon_color="238,221,130" remove_on_death="false">
+	<stack_type value="ignore"/>
+	<duration value="50400"/>
+	<display_value_format value="time"/>
+	<tags value="protection_blessing"/>
+
+	<effect_group>
+		<triggered_effect trigger="onSelfBuffFinish" action="ModifyStats" stat="Health" operation="subtract" value="99999999"/>
+		<triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="buffInfectedMissionaryG"/>
+	</effect_group>
+</buff>
+
+<buff name="buffProtectionBlessing28G" name_key="buffProtectionBlessingGName" description_key="buffProtectionBlessingGDesc" icon="ui_game_symbol_add" icon_color="238,221,130" remove_on_death="false">
+	<stack_type value="ignore"/>
+	<duration value="100800"/>
+	<display_value_format value="time"/>
+	<tags value="protection_blessing"/>
+	
+	<effect_group>
+		<triggered_effect trigger="onSelfBuffFinish" action="ModifyStats" stat="Health" operation="subtract" value="99999999"/>
+		<triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="buffInfectedMissionaryG"/>
+	</effect_group>
+</buff>
+
+<buff name="buffHolyWaterG" name_key="buffHolyWaterGName" description_key="buffHolyWaterGDesc" icon="ui_game_symbol_water" icon_color="238,221,130" remove_on_death="false">
+	<stack_type value="ignore"/>
+	
+	<effect_group>
+		<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffProtectionBlessing7G"/>
+		<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffProtectionBlessing14G"/>
+		<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffProtectionBlessing28G"/>
+		<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffInfectionCatch"/>
+		<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffAbrasionCatch"/>
+		<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffLegBroken"/>
+		<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffLegSprainedCHTrigger"/>
+		<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffArmSprainedCHTrigger"/>
+		<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffInjuryBleedingTwo"/>
+		<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffFatiguedTrigger"/>
+		<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffLaceration"/>
+		<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffInjuryStunned01CHTrigger"/>
+		<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffInjuryConcussion"/>
+		<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffInjuryBleeding"/>
+		<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffInjuryBleedingOne"/>
+		<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffInfectionMain"/>
+		<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffInfectionGetsWorse"/>
+		<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffInfectionCureDisplay"/>
+		<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffInfection01Untreated"/>
+		<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffInfection02GetBetter"/>
+		<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffInfection03GetBetter"/>
+		<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffInfection01GetBetter"/>
+		<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffInfection02Untreated"/>
+		<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffInfection03Untreated"/>
+		<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffInfection04"/>
+		<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffInjuryBleedingBarbedWire"/>
+		<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffInfection01Main"/>
+		<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffArmSprained"/>
+		<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="bufflegSprained"/>
+		<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffShocked"/>
+		<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffArmBroken"/>
+		<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffInjuryStunned01"/>
+		<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffInjuryStunned02"/>
+		<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffInjuryStunned03"/>
+		<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffLegSprainedFallTrigger"/>
+		<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffDysenteryMain"/>
+		<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffDysenteryCureDisplay"/>
+		<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffDysenteryAddCure"/>
+		<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffInfectionAddCure"/>
+		<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffDysenteryCureDisplay"/>
+		<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffDysentery01UntreatedDiarrhea"/>
+		<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffDysentery01GetBetterDiarrhea"/>
+		<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffDysentery01GetBetter"/>
+		<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffDysentery01Untreated"/>
+		<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffInjuryAbrasionTreated"/>
+		<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffInjuryAbrasion"/>
+		<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffFatigued"/>
+		<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffLegCast"/>
+		<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffArmCast"/>
+		<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffArmSplinted"/>
+		<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffLegSplinted"/>
+		<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffInjuryStunned00"/>
+		<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffInjuryBleedingParticle"/>
+		<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffInternalBleeding"/>	
+	</effect_group>
+</buff>
+
+<buff name="buffInfectedMissionaryG" name_key="buffInfectedMissionaryGName" description_key="buffInfectedMissionaryGDesc" icon="ui_game_symbol_skull" icon_color="255,0,0" remove_on_death="false">
+	<stack_type value="ignore"/>
+	
+	<effect_group>
+		<passive_effect name="AttributeLevel" operation="base_set" value="1"/>
+		<triggered_effect trigger="onSelfBuffStart" action="RefreshPerks"/>
+		<passive_effect name="SkillLevel" operation="base_set" value="1"/>
+		<passive_effect name="PerkLevel" operation="base_set" value="0"/>
+	</effect_group>
+</buff>
+
+<buff name="buffBlessedSetBonus" name_key="buffBlessedSetBonusName" description_key="buffBlessedSetBonusDesc" tooltip_key="buffBlessedSetBonusTooltip" icon="ui_game_symbol_armor_iron" icon_color="255,255,255">
+	<stack_type value="ignore"/>
+	<display_value_key value="Bonus"/>
+	<display_value value="xxx"/>
+
+	<effect_group>
+		<requirements>
+			<requirement name="ArmorGroupLowestQuality" group_name="groupBlessed" operation="Equals" value="1"/>
+		</requirements>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".armorPreacherFSBDisplay01" operation="set" value="5"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".armorPreacherFSBDisplay01" operation="set" value="5"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="RemoveCVar" cvar=".armorPreacherFSBDisplay01"/>
+			<passive_effect name="BuffResistance" operation="base_add" value=".05" tags="buffInfectionCatch,buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffAbrasionCatch,buffLaceration,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".armorPreacherFSBDisplay02" operation="set" value="5"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".armorPreacherFSBDisplay02" operation="set" value="5"/>
+				
+			<triggered_effect trigger="onSelfBuffRemove" action="RemoveCVar" cvar=".armorPreacherFSBDisplay01,.armorPreacherFSBDisplay02"/>
+	</effect_group>
+		
+	<effect_group>
+		<requirements>
+			<requirement name="ArmorGroupLowestQuality" group_name="groupBlessed" operation="Equals" value="2"/>
+		</requirements>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".armorPreacherFSBDisplay01" operation="set" value="10"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".armorPreacherFSBDisplay01" operation="set" value="10"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="RemoveCVar" cvar=".armorPreacherFSBDisplay01"/>
+			<passive_effect name="BuffResistance" operation="base_add" value=".1" tags="buffInfectionCatch,buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffAbrasionCatch,buffLaceration,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".armorPreacherFSBDisplay02" operation="set" value="10"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".armorPreacherFSBDisplay02" operation="set" value="10"/>
+				
+			<triggered_effect trigger="onSelfBuffRemove" action="RemoveCVar" cvar=".armorPreacherFSBDisplay01,.armorPreacherFSBDisplay02"/>
+	</effect_group>
+	
+	<effect_group>
+		<requirements>
+			<requirement name="ArmorGroupLowestQuality" group_name="groupBlessed" operation="Equals" value="3"/>
+		</requirements>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".armorPreacherFSBDisplay01" operation="set" value="15"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".armorPreacherFSBDisplay01" operation="set" value="15"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="RemoveCVar" cvar=".armorPreacherFSBDisplay01"/>
+			<passive_effect name="BuffResistance" operation="base_add" value=".15" tags="buffInfectionCatch,buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffAbrasionCatch,buffLaceration,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".armorPreacherFSBDisplay02" operation="set" value="15"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".armorPreacherFSBDisplay02" operation="set" value="15"/>
+				
+			<triggered_effect trigger="onSelfBuffRemove" action="RemoveCVar" cvar=".armorPreacherFSBDisplay01,.armorPreacherFSBDisplay02"/>
+	</effect_group>
+		
+	<effect_group>
+		<requirements>
+			<requirement name="ArmorGroupLowestQuality" group_name="groupBlessed" operation="Equals" value="4"/>
+		</requirements>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".armorPreacherFSBDisplay01" operation="set" value="20"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".armorPreacherFSBDisplay01" operation="set" value="20"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="RemoveCVar" cvar=".armorPreacherFSBDisplay01"/>
+			<passive_effect name="BuffResistance" operation="base_add" value=".2" tags="buffInfectionCatch,buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffAbrasionCatch,buffLaceration,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".armorPreacherFSBDisplay02" operation="set" value="20"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".armorPreacherFSBDisplay02" operation="set" value="20"/>
+				
+			<triggered_effect trigger="onSelfBuffRemove" action="RemoveCVar" cvar=".armorPreacherFSBDisplay01,.armorPreacherFSBDisplay02"/>
+	</effect_group>
+		
+	<effect_group>
+		<requirements>
+			<requirement name="ArmorGroupLowestQuality" group_name="groupBlessed" operation="Equals" value="5"/>
+		</requirements>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".armorPreacherFSBDisplay01" operation="set" value="25"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".armorPreacherFSBDisplay01" operation="set" value="25"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="RemoveCVar" cvar=".armorPreacherFSBDisplay01"/>
+			<passive_effect name="BuffResistance" operation="base_add" value=".25" tags="buffInfectionCatch,buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffAbrasionCatch,buffLaceration,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".armorPreacherFSBDisplay02" operation="set" value="25"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".armorPreacherFSBDisplay02" operation="set" value="25"/>
+				
+			<triggered_effect trigger="onSelfBuffRemove" action="RemoveCVar" cvar=".armorPreacherFSBDisplay01,.armorPreacherFSBDisplay02"/>
+	</effect_group>
+		
+	<effect_group>
+		<requirements>
+			<requirement name="ArmorGroupLowestQuality" group_name="groupBlessed" operation="Equals" value="6"/>
+		</requirements>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".armorPreacherFSBDisplay01" operation="set" value="40"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".armorPreacherFSBDisplay01" operation="set" value="40"/>
+			<passive_effect name="BuffResistance" operation="base_add" value=".4" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffAbrasionCatch,buffLaceration,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire"/>
+				
+			<passive_effect name="BuffResistance" operation="base_add" value="1" tags="buffInfectionCatch"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".armorPreacherFSBDisplay02" operation="set" value="100"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".armorPreacherFSBDisplay02" operation="set" value="100"/>
+				
+			<triggered_effect trigger="onSelfBuffRemove" action="RemoveCVar" cvar=".armorPreacherFSBDisplay01,.armorPreacherFSBDisplay02"/>
+	</effect_group>
+</buff>
+
+<buff name="buffBlessedFullSetBonusCheck" hidden="true" icon_color="0,255,255">
+	<stack_type value="ignore"/>
+	<duration value="0"/>
+</buff>
+
+<buff name="buff44FlagBlessingMissionaryG" name_key="buff44FlagBlessingMissionaryGName" description_key="buff44FlagBlessingMissionaryGDesc" icon="ui_game_symbol_map_waypoint_set" icon_color="255,255,255">
+	<stack_type value="replace"/>
+	<duration value="5"/>
+
+	<effect_group>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" stat="Health" operation="add" value="44"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" stat="Stamina" operation="add" value="44"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" stat="Food" operation="add" value="44"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" stat="Water" operation="add" value="44"/>
+		<passive_effect name="HypothermalResist" operation="base_add" value="44"/>
+		<passive_effect name="HyperthermalResist" operation="base_add" value="44"/>
+	</effect_group>
+</buff>
+	
+<buff name="buffPilgrimagingMissionaryG" name_key="buffPilgrimagingMissionaryGName" description_key="buffPilgrimagingMissionaryGDesc" icon="ui_game_symbol_run" icon_color="255,255,255">
+	<stack_type value="ignore"/>
+	<duration value="20"/>
+	<display_value_format value="time"/>
+	
+	<effect_group>
+		<passive_effect name="GeneralDamageResist" operation="base_add" value="1"/>
+		<passive_effect name="ElementalDamageResist" operation="base_add" value="200" tags="cold,heat,electrical"/>
+		<passive_effect name="PhysicalDamageResist" operation="base_add" value="200"/>
+		<passive_effect name="PhysicalDamageResist" operation="base_add" value="200" tags="coredamageresist"/>
+		<passive_effect name="ElementalDamageResist" operation="base_add" value="200" tags="heat,electrical"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="RemoveAllNegativeBuffs"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffInjuryAbrasionTreated,buffLegSplinted,buffLegCast,buffArmSplinted,buffArmCast"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$buffDrugOhShitzDropsDuration" operation="set" value="1083"/>
+		<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="self" buff="buffDrugOhShitzDrops"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="Health" operation="set" value="25000"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="Food" operation="set" value="25000"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="Water" operation="set" value="25000"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="Stamina" operation="set" value="25000"/>
+		<triggered_effect trigger="onSelfBuffFinish" action="RemoveBuff" target="self" buff="buffDrugOhShitzDrops"/>
+	</effect_group>
+</buff>
+
+</append>
+
+<append xpath="/buffs/buff[@name='buffStatusCheck02']">
+	<effect_group>
+		<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffBlessedSetBonus">
+			<requirement name="ArmorGroupCount" group_name="groupBlessed" operation="LTE" value="3"/>
+			<requirement name="HasBuff" buff="buffBlessedSetBonus"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffBlessedSetBonus">
+			<requirement name="ArmorGroupCount" group_name="groupBlessed" operation="Equals" value="4"/>
+			<requirement name="!HasBuff" buff="buffBlessedSetBonus"/>
+		</triggered_effect>
+
+		<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffBlessedFullSetBonusCheck">
+			<requirement name="ArmorGroupCount" group_name="groupBlessed" operation="LTE" value="3"/>
+			<requirement name="HasBuff" buff="buffBlessedFullSetBonusCheck"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffBlessedFullSetBonusCheck">
+			<requirement name="ArmorGroupLowestQuality" group_name="groupBlessed" operation="LTE" value="5"/>
+			<requirement name="HasBuff" buff="buffBlessedFullSetBonusCheck"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffBlessedFullSetBonusCheck">
+			<requirement name="ArmorGroupCount" group_name="groupBlessed" operation="Equals" value="4"/>
+			<requirement name="ArmorGroupLowestQuality" group_name="groupBlessed" operation="Equals" value="6"/>
+			<requirement name="!HasBuff" buff="buffBlessedFullSetBonusCheck"/>
+		</triggered_effect>
+	</effect_group>
+</append>
+
+<append xpath="/buffs/buff[@name='buffOnAnyCrit']">
+	<effect_group>
+			<requirement name="CVarCompare" cvar="noTeethNoInfection" operation="LT" value="1"/>
+			<requirement name="!HasBuff" buff="buffBlessedFullSetBonusCheck"/>
+				<passive_effect name="BuffResistance" operation="base_add" value="-.1" tags="buffInfectionCatch"/>
+				<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffInfectionCatch"/>
+		</effect_group>
+</append>
+
+<prepend xpath="/buffs/buff[not(starts-with(@name,'buffBlessedSetBonus')) and not(starts-with(@name,'buffPilgrimagingMissionaryG')) and not(starts-with(@name,'buff44FlagBlessingMissionaryG')) and not(starts-with(@name,'buffStatusCheck01')) and not(starts-with(@name,'buffStatusCheck02')) and not(starts-with(@name,'buffBlessedFullSetBonusCheck')) and not(starts-with(@name,'buffInfectedMissionaryG')) and not(tags)]">
+	<tags value="new_journey"/>
+</prepend>
+
+<csv xpath="/buffs/buff/tags/@value" op="Add">new_journey</csv>
+
+</Giuigi>
