@@ -1,0 +1,25 @@
+<Giuigi>
+
+<append xpath="/recipes">
+
+<recipe name="resourceSilverNugget" count="1" tooltip="ttScrapMetalIron" always_unlocked="true" tags="salvageScrap"> <wildcard_forge_category /> </recipe>
+
+<recipe name="cntHolyRelicG" count="1">
+	<ingredient name="resourceRockSmall" count="5"/>
+</recipe>
+
+<recipe name="cntHolyCacheGBlockVariantHelper" count="1">
+	<ingredient name="resourceWood" count="5"/>
+</recipe>
+
+<recipe name="planterHolyG" count="1">
+	<ingredient name="resourceYuccaFibers" count="5"/>
+</recipe>
+
+<recipe name="plantOfferingMissionaryG" count="1">
+	<ingredient name="plantMissionaryG" count="10"/>
+</recipe>
+
+</append>
+
+</Giuigi>
