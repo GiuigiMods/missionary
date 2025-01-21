@@ -1,0 +1,510 @@
+<Giuigi>
+
+<append xpath="/blocks">
+
+<block name="cntHolyRelicG">
+	<property name="Extends" value="graveStone03"/>
+	<property name="DescriptionKey" value="cntHolyRelicGDesc"/>
+	<property name="Class" value="GameEvent"/>
+	<property name="ActivateEvent" value="action_givemissionaryquestG"/>
+	<property name="CustomIcon" value="graveStone03"/>
+	<property name="CustomIconTint" value="C0C0C0"/>
+	<property name="TintColor" value="C0C0C0"/>
+	<property name="SellableToTrader" value="false"/>
+	<property name="EconomicValue" value="0"/>
+	<property name="Place" value="TowardsPlacerInverted"/>
+	<property name="OnlySimpleRotations" value="true"/>
+	<property name="IsTerrainDecoration" value="true"/>
+	<property name="CanPickup" value="true"/>
+	<property class="RepairItems">
+		<property name="resourceRockSmall" value="2"/>
+	</property>
+	<drop event="Harvest" name="resourceRockSmall" count="5" tag="allHarvest"/>
+	<drop event="Destroy" count="0"/>
+	<drop event="Fall" name="terrDestroyedStone" count="1" prob="0.75" stick_chance="1"/>
+</block>
+
+<block name="cntHolyCacheG">
+	<property name="CreativeMode" value="Player"/>
+	<property name="DescriptionKey" value="cntHolyCacheGDesc"/>
+	<property name="Extends" value="cntCasketModernOpenTan"/>
+	<property name="Class" value="GameEvent"/>
+	<property name="ActivateEvent" value="action_rollcacheG"/>
+	<property name="CustomIcon" value="cntCasketModernClosedWhite"/>
+	<property name="CustomIconTint" value="C0C0C0"/>
+	<property name="TintColor" value="C0C0C0"/>
+	<property name="EconomicValue" value="0"/>
+	<property name="Material" value="Mwood"/>
+	<property name="Place" value="TowardsPlacerInverted"/>
+	<property name="OnlySimpleRotations" value="true"/>
+	<property name="IsTerrainDecoration" value="true"/>
+	<property name="SellableToTrader" value="false"/>
+	<property name="CanPickup" value="true"/>
+	<property name="Model" value="@:Entities/LootContainers/casketModernClosePrefab.prefab"/>
+	<property class="RepairItems">
+		<property name="resourceWood" value="2"/>
+	</property>
+	<drop event="Harvest" name="resourceWood" count="5" tag="allHarvest"/>
+	<drop event="Destroy" count="0"/>
+	<drop event="Fall" name="terrDestroyedWoodDebris" count="1" prob="0.75" stick_chance="1"/>
+</block>
+
+<block name="cntHolyCacheRedG">
+	<property name="Extends" value="cntHolyCacheG"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="cntCasketModernClosedWhite"/>
+	<property name="CustomIconTint" value="523538"/>
+	<property name="TintColor" value="523538"/>
+	<property name="SortOrder2" value="0002"/>
+</block>
+
+<block name="cntHolyCacheTanG">
+	<property name="Extends" value="cntHolyCacheG"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="cntCasketModernClosedWhite"/>
+	<property name="CustomIconTint" value="7F5D44"/>
+	<property name="CustomIconTint" value="7F5D44"/>
+	<property name="SortOrder2" value="0012"/>
+</block>
+
+<block name="cntHolyCacheBrownG">
+	<property name="Extends" value="cntHolyCacheG"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="cntCasketModernClosedWhite"/>
+	<property name="CustomIconTint" value="633F00"/>
+	<property name="TintColor" value="633F00"/>
+	<property name="SortOrder2" value="0001"/>
+</block>
+
+<block name="cntHolyCacheBlueG">
+	<property name="Extends" value="cntHolyCacheG"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="cntCasketModernClosedWhite"/>
+	<property name="CustomIconTint" value="66727B"/>
+	<property name="TintColor" value="66727B"/>
+	<property name="SortOrder2" value="0006"/>
+</block>
+
+<block name="cntHolyCacheYellowG">
+	<property name="Extends" value="cntHolyCacheG"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="cntCasketModernClosedWhite"/>
+	<property name="CustomIconTint" value="98967C"/>
+	<property name="TintColor" value="98967C"/>
+	<property name="SortOrder2" value="0004"/>
+</block>
+
+<block name="cntHolyCachePurpleG">
+	<property name="Extends" value="cntHolyCacheG"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="cntCasketModernClosedWhite"/>
+	<property name="CustomIconTint" value="897A87"/>
+	<property name="TintColor" value="897A87"/>
+	<property name="SortOrder2" value="0007"/>
+</block>
+
+<block name="cntHolyCacheGreenG">
+	<property name="Extends" value="cntHolyCacheG"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="cntCasketModernClosedWhite"/>
+	<property name="CustomIconTint" value="657168"/>
+	<property name="TintColor" value="657168"/>
+	<property name="SortOrder2" value="0005"/>
+</block>
+
+<block name="cntHolyCacheAquaG">
+	<property name="Extends" value="cntHolyCacheG"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="cntCasketModernClosedWhite"/>
+	<property name="CustomIconTint" value="889897"/>
+	<property name="TintColor" value="889897"/>
+	<property name="SortOrder2" value="0006"/>
+</block>
+
+<block name="cntHolyCacheGreyG">
+	<property name="Extends" value="cntHolyCacheG"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="cntCasketModernClosedWhite"/>
+	<property name="CustomIconTint" value="575757"/>
+	<property name="TintColor" value="575757"/>
+	<property name="SortOrder2" value="0008"/>
+</block>
+
+<block name="cntHolyCacheGBlockVariantHelper">
+	<property name="Extends" value="cntHolyCacheG"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="SellableToTrader" value="false"/>
+	<property name="DescriptionKey" value="cntHolyCacheGDesc"/>
+	<property name="CustomIcon" value="cntCasketModernClosedWhite"/>
+	<property name="CustomIconTint" value="C0C0C0"/>
+	<property name="ItemTypeIcon" value="all_blocks"/>
+	<property name="SelectAlternates" value="true"/>
+	<property name="PlaceAltBlockValue" value="cntHolyCacheG,cntHolyCacheRedG,cntHolyCacheTanG,cntHolyCacheBrownG,cntHolyCacheBlueG,cntHolyCachePurpleG,cntHolyCacheGreyG,cntHolyCacheAquaG,cntHolyCacheYellowG,cntHolyCacheGreenG"/>
+	<property name="SortOrder1" value="U200"/>
+	<property name="SortOrder2" value="0000"/>
+	<property name="FilterTags" value="MC_playerBlocks,SC_playerHelpers"/>
+</block>
+
+<block name="planterHolyG">
+	<property name="CreativeMode" value="Player"/>
+	<property name="DescriptionKey" value="planterHolyGDesc"/>
+	<property name="Extends" value="planter"/>
+	<property name="Class" value="GameEvent"/>
+	<property name="ActivateEvent" value="action_rollplanterG"/>
+	<property name="CustomIcon" value="planter"/>
+	<property name="CustomIconTint" value="C0C0C0"/>
+	<property name="Model" value="Entities/OutdoorDecor/planterPrefab"/>
+	<property name="TintColor" value="C0C0C0"/>
+	<property name="Material" value="Mfarmland"/>
+	<property name="EconomicValue" value="0"/>
+	<property name="Place" value="TowardsPlacerInverted"/>
+	<property name="OnlySimpleRotations" value="true"/>
+	<property name="IsTerrainDecoration" value="true"/>
+	<property name="SellableToTrader" value="false"/>
+	<property name="CanPickup" value="true"/>
+	<property class="RepairItems">
+		<property name="resourceYuccaFibers" value="2"/>
+		<property name="resourceCobblestones" value="0"/>
+	</property>
+	<drop event="Harvest" name="resourceYuccaFibers" count="5" tag="allHarvest"/>
+	<drop event="Harvest" name="resourceRockSmall" count="0" tag="allHarvest"/>
+	<drop event="Harvest" name="resourceClayLump" count="0" tag="allHarvest"/>
+	<drop event="Fall" name="terrDestroyedStone" count="0" prob="0.1" stick_chance="0.5"/>
+	<drop event="Fall" name="terrDirt" count="1" prob="0.25" stick_chance="1"/>
+</block>
+
+<block name="wallTorchMissionaryG">
+	<property name="Extends" value="wallTorchLight"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="SellableToTrader" value="false"/>
+	<property name="Model" value="Entities/Lighting/torch_wallPrefab"/>
+	<property name="Class" value="TorchHeatMap"/>
+	<property name="HeatMapStrength" value="333333"/>
+	<property name="HeatMapTime" value="333333"/>
+	<property name="CustomIcon" value="torchWallHolder"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="CanPickup" value="false"/>
+	<drop event="Destroy" name="meleeTorchMissionaryG" count="1"/>
+	<drop event="Destroy" name="meleeToolTorch" count="0"/>
+</block>
+
+<block name="silverShapesMissionaryG" shapes="All">
+	<property name="DescriptionKey" value="silverShapesMissionaryGDesc"/>
+	<property name="DisplayType" value="blockHardened"/>
+	<property name="Material" value="Msilver_shapesG"/>
+	<property name="Shape" value="New"/>
+	<property name="SellableToTrader" value="false"/>
+	<property name="Texture" value="580"/>
+	<property name="UiBackgroundTexture" value="580"/>
+	<property name="EconomicValue" value="0"/>
+	<property name="EconomicBundleSize" value="0"/>
+	<property class="RepairItems">
+		<property name="silverShapesMissionaryG:VariantHelper" value="1"/>
+	</property>
+	<drop event="Harvest" name="resourceScrapIron" count="15" tag="allHarvest"/>
+	<drop event="Destroy" count="0"/>
+	<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
+	<property name="UpgradeSound" value="place_block_metal"/>
+	<property name="SortOrder1" value="S040"/>
+	<property name="Group" value="Building,advBuilding"/>
+	<property name="FilterTags" value="MC_Shapes"/>
+</block>
+
+<block name="flagWallHungThick44BlackMissionaryG">
+	<property name="Extends" value="flagWallHungThick44Black"/>
+	<property name="Tags" value="recyclable_blessed_items"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="Class" value="GameEvent"/>
+	<property name="SellableToTrader" value="false"/>
+	<property name="ActivateEvent" value="action_buff44FlagG"/>
+	<property name="TintColor" value="404040"/>
+	<property name="CustomIcon" value="flagWallHungThick44Black"/>
+	<property name="DescriptionKey" value="flagWallHungThick44BlackMissionaryGDesc"/>
+	<property name="Model" value="Entities/Decor/flagThick44Prefab"/>
+	<property name="EconomicValue" value="0"/>
+	<drop event="Harvest" name="resourceCloth" count="0" tag="allHarvest"/>
+	<drop event="Destroy" name="flagThick44BlockMissionaryGVariantHelper" count="1"/>
+	<property name="SellableToTrader" value="false"/>
+	<property name="SortOrder2" value="0044a"/>
+</block>
+
+<block name="flagWallHungThick44PurpleMissionaryG">
+	<property name="Extends" value="flagWallHungThick44BlackMissionaryG"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="TintColor" value="5A4B88"/>
+	<property name="CustomIcon" value="flagWallHungThick44Purple"/>
+	<property name="DescriptionKey" value="flagWallHungThick44BlackMissionaryGDesc"/>
+	<property name="Model" value="Entities/Decor/flagThick44Prefab"/>
+	<property name="SortOrder2" value="0044b"/>
+</block>
+
+<block name="flagWallHungThick44RedMissionaryG">
+	<property name="Extends" value="flagWallHungThick44BlackMissionaryG"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="flagWallHungThick44WhiteMissionaryG"/>
+	<property name="CustomIconTint" value="212,84,84"/>
+	<property name="TintColor" value="212,84,84"/>
+	<property name="DescriptionKey" value="flagWallHungThick44BlackMissionaryGDesc"/>
+	<property name="Model" value="Entities/Decor/flagThick44Prefab"/>
+	<property name="SortOrder2" value="0044b"/>
+</block>
+
+<block name="flagWallHungThick44AquaMissionaryG">
+	<property name="Extends" value="flagWallHungThick44BlackMissionaryG"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="flagWallHungThick44WhiteMissionaryG"/>
+	<property name="CustomIconTint" value="889897"/>
+	<property name="TintColor" value="889897"/>
+	<property name="DescriptionKey" value="flagWallHungThick44BlackMissionaryGDesc"/>
+	<property name="Model" value="Entities/Decor/flagThick44Prefab"/>
+	<property name="SortOrder2" value="0044b"/>
+</block>
+
+<block name="flagWallHungThick44BrownMissionaryG">
+	<property name="Extends" value="flagWallHungThick44BlackMissionaryG"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="flagWallHungThick44WhiteMissionaryG"/>
+	<property name="CustomIconTint" value="132,105,84"/>
+	<property name="TintColor" value="132,105,84"/>
+	<property name="DescriptionKey" value="flagWallHungThick44BlackMissionaryGDesc"/>
+	<property name="Model" value="Entities/Decor/flagThick44Prefab"/>
+	<property name="SortOrder2" value="0044b"/>
+</block>
+
+<block name="flagWallHungThick44BlueMissionaryG">
+	<property name="Extends" value="flagWallHungThick44BlackMissionaryG"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="flagWallHungThick44WhiteMissionaryG"/>
+	<property name="CustomIconTint" value="74,93,134"/>
+	<property name="TintColor" value="70,89,127"/>
+	<property name="DescriptionKey" value="flagWallHungThick44BlackMissionaryGDesc"/>
+	<property name="Model" value="Entities/Decor/flagThick44Prefab"/>
+	<property name="SortOrder2" value="0044b"/>
+</block>
+
+<block name="flagWallHungThick44YellowMissionaryG">
+	<property name="Extends" value="flagWallHungThick44BlackMissionaryG"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="flagWallHungThick44WhiteMissionaryG"/>
+	<property name="CustomIconTint" value="218,200,135"/>
+	<property name="TintColor" value="218,200,135"/>
+	<property name="DescriptionKey" value="flagWallHungThick44BlackMissionaryGDesc"/>
+	<property name="Model" value="Entities/Decor/flagThick44Prefab"/>
+	<property name="SortOrder2" value="0044b"/>
+</block>
+
+<block name="flagWallHungThick44WhiteMissionaryG">
+	<property name="Extends" value="flagWallHungThick44BlackMissionaryG"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="flagWallHungThick44WhiteMissionaryG"/>
+	<property name="CustomIconTint" value="A1A1A1"/>
+	<property name="TintColor" value="A1A1A1"/>
+	<property name="DescriptionKey" value="flagWallHungThick44BlackMissionaryGDesc"/>
+	<property name="Model" value="Entities/Decor/flagThick44Prefab"/>
+	<property name="SortOrder2" value="0044b"/>
+</block>
+
+<block name="flagWallHungThick44GreenMissionaryG">
+	<property name="Extends" value="flagWallHungThick44BlackMissionaryG"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="flagWallHungThick44WhiteMissionaryG"/>
+	<property name="CustomIconTint" value="128,152,120"/>
+	<property name="TintColor" value="74,130,74"/>
+	<property name="DescriptionKey" value="flagWallHungThick44BlackMissionaryGDesc"/>
+	<property name="Model" value="Entities/Decor/flagThick44Prefab"/>
+	<property name="SortOrder2" value="0044b"/>
+</block>
+
+<block name="flagWallHungThick44GreyMissionaryG">
+	<property name="Extends" value="flagWallHungThick44BlackMissionaryG"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="flagWallHungThick44WhiteMissionaryG"/>
+	<property name="CustomIconTint" value="575757"/>
+	<property name="TintColor" value="575757"/>
+	<property name="DescriptionKey" value="flagWallHungThick44BlackMissionaryGDesc"/>
+	<property name="Model" value="Entities/Decor/flagThick44Prefab"/>
+	<property name="SortOrder2" value="0044b"/>
+</block>
+
+<block name="flagWallHungThick44PinkMissionaryG">
+	<property name="Extends" value="flagWallHungThick44BlackMissionaryG"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="flagWallHungThick44WhiteMissionaryG"/>
+	<property name="CustomIconTint" value="188,148,188"/>
+	<property name="TintColor" value="188,148,188"/>
+	<property name="DescriptionKey" value="flagWallHungThick44BlackMissionaryGDesc"/>
+	<property name="Model" value="Entities/Decor/flagThick44Prefab"/>
+	<property name="SortOrder2" value="0044b"/>
+</block>
+
+<block name="flagWallHungThick44OrangeMissionaryG">
+	<property name="Extends" value="flagWallHungThick44BlackMissionaryG"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="flagWallHungThick44WhiteMissionaryG"/>
+	<property name="CustomIconTint" value="255,166,77"/>
+	<property name="TintColor" value="255,166,77"/>
+	<property name="DescriptionKey" value="flagWallHungThick44BlackMissionaryGDesc"/>
+	<property name="Model" value="Entities/Decor/flagThick44Prefab"/>
+	<property name="SortOrder2" value="0044b"/>
+</block>
+
+<block name="flagTopWallHungThick44BlackMissionaryG">
+	<property name="Extends" value="flagTopWallHungThick44Black"/>
+	<property name="Tags" value="recyclable_blessed_items"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="Class" value="GameEvent"/>
+	<property name="SellableToTrader" value="false"/>
+	<property name="ActivateEvent" value="action_buff44FlagG"/>
+	<property name="TintColor" value="404040"/>
+	<property name="DescriptionKey" value="flagWallHungThick44BlackMissionaryGDesc"/>
+	<property name="CustomIcon" value="flagWallHungThick44Black"/>
+	<property name="Model" value="Entities/Decor/flagThick44Prefab"/>
+	<property name="EconomicValue" value="0"/>
+	<drop event="Harvest" name="resourceCloth" count="0" tag="allHarvest"/>
+	<drop event="Destroy" name="flagThick44BlockMissionaryGVariantHelper" count="1"/>
+	<property name="SellableToTrader" value="false"/>
+	<property name="SortOrder2" value="0244a"/>
+</block>
+
+<block name="flagTopWallHungThick44PurpleMissionaryG">
+	<property name="Extends" value="flagTopWallHungThick44BlackMissionaryG"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="TintColor" value="5A4B88"/>
+	<property name="CustomIcon" value="flagWallHungThick44Purple"/>
+	<property name="DescriptionKey" value="flagWallHungThick44BlackMissionaryGDesc"/>
+	<property name="Model" value="Entities/Decor/flagThick44Prefab"/>
+	<property name="SortOrder2" value="0244b"/>
+</block>
+
+<block name="flagTopWallHungThick44RedMissionaryG">
+	<property name="Extends" value="flagTopWallHungThick44BlackMissionaryG"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="flagWallHungThick44WhiteMissionaryG"/>
+	<property name="CustomIconTint" value="212,84,84"/>
+	<property name="TintColor" value="212,84,84"/>
+	<property name="DescriptionKey" value="flagWallHungThick44BlackMissionaryGDesc"/>
+	<property name="Model" value="Entities/Decor/flagThick44Prefab"/>
+	<property name="SortOrder2" value="0244b"/>
+</block>
+
+<block name="flagTopWallHungThick44AquaMissionaryG">
+	<property name="Extends" value="flagTopWallHungThick44BlackMissionaryG"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="flagWallHungThick44WhiteMissionaryG"/>
+	<property name="CustomIconTint" value="889897"/>
+	<property name="TintColor" value="889897"/>
+	<property name="DescriptionKey" value="flagWallHungThick44BlackMissionaryGDesc"/>
+	<property name="Model" value="Entities/Decor/flagThick44Prefab"/>
+	<property name="SortOrder2" value="0244b"/>
+</block>
+
+<block name="flagTopWallHungThick44BrownMissionaryG">
+	<property name="Extends" value="flagTopWallHungThick44BlackMissionaryG"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="flagWallHungThick44WhiteMissionaryG"/>
+	<property name="CustomIconTint" value="132,105,84"/>
+	<property name="TintColor" value="132,105,84"/>
+	<property name="DescriptionKey" value="flagWallHungThick44BlackMissionaryGDesc"/>
+	<property name="Model" value="Entities/Decor/flagThick44Prefab"/>
+	<property name="SortOrder2" value="0244b"/>
+</block>
+
+<block name="flagTopWallHungThick44BlueMissionaryG">
+	<property name="Extends" value="flagTopWallHungThick44BlackMissionaryG"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="flagWallHungThick44WhiteMissionaryG"/>
+	<property name="CustomIconTint" value="74,93,134"/>
+	<property name="TintColor" value="70,89,127"/>
+	<property name="DescriptionKey" value="flagWallHungThick44BlackMissionaryGDesc"/>
+	<property name="Model" value="Entities/Decor/flagThick44Prefab"/>
+	<property name="SortOrder2" value="0244b"/>
+</block>
+
+<block name="flagTopWallHungThick44YellowMissionaryG">
+	<property name="Extends" value="flagTopWallHungThick44BlackMissionaryG"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="flagWallHungThick44WhiteMissionaryG"/>
+	<property name="CustomIconTint" value="218,200,135"/>
+	<property name="TintColor" value="218,200,135"/>
+	<property name="DescriptionKey" value="flagWallHungThick44BlackMissionaryGDesc"/>
+	<property name="Model" value="Entities/Decor/flagThick44Prefab"/>
+	<property name="SortOrder2" value="0244b"/>
+</block>
+
+<block name="flagTopWallHungThick44WhiteMissionaryG">
+	<property name="Extends" value="flagTopWallHungThick44BlackMissionaryG"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="flagWallHungThick44WhiteMissionaryG"/>
+	<property name="CustomIconTint" value="A1A1A1"/>
+	<property name="TintColor" value="A1A1A1"/>
+	<property name="DescriptionKey" value="flagWallHungThick44BlackMissionaryGDesc"/>
+	<property name="Model" value="Entities/Decor/flagThick44Prefab"/>
+	<property name="SortOrder2" value="0244b"/>
+</block>
+
+<block name="flagTopWallHungThick44GreenMissionaryG">
+	<property name="Extends" value="flagTopWallHungThick44BlackMissionaryG"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="flagWallHungThick44WhiteMissionaryG"/>
+	<property name="CustomIconTint" value="128,152,120"/>
+	<property name="TintColor" value="74,130,74"/>
+	<property name="DescriptionKey" value="flagWallHungThick44BlackMissionaryGDesc"/>
+	<property name="Model" value="Entities/Decor/flagThick44Prefab"/>
+	<property name="SortOrder2" value="0244b"/>
+</block>
+
+<block name="flagTopWallHungThick44GreyMissionaryG">
+	<property name="Extends" value="flagTopWallHungThick44BlackMissionaryG"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="flagWallHungThick44WhiteMissionaryG"/>
+	<property name="CustomIconTint" value="575757"/>
+	<property name="TintColor" value="575757"/>
+	<property name="DescriptionKey" value="flagWallHungThick44BlackMissionaryGDesc"/>
+	<property name="Model" value="Entities/Decor/flagThick44Prefab"/>
+	<property name="SortOrder2" value="0244b"/>
+</block>
+
+<block name="flagTopWallHungThick44PinkMissionaryG">
+	<property name="Extends" value="flagTopWallHungThick44BlackMissionaryG"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="flagWallHungThick44WhiteMissionaryG"/>
+	<property name="CustomIconTint" value="188,148,188"/>
+	<property name="TintColor" value="188,148,188"/>
+	<property name="DescriptionKey" value="flagWallHungThick44BlackMissionaryGDesc"/>
+	<property name="Model" value="Entities/Decor/flagThick44Prefab"/>
+	<property name="SortOrder2" value="0244b"/>
+</block>
+
+<block name="flagTopWallHungThick44OrangeMissionaryG">
+	<property name="Extends" value="flagTopWallHungThick44BlackMissionaryG"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="flagWallHungThick44WhiteMissionaryG"/>
+	<property name="CustomIconTint" value="255,166,77"/>
+	<property name="TintColor" value="255,166,77"/>
+	<property name="DescriptionKey" value="flagWallHungThick44BlackMissionaryGDesc"/>
+	<property name="Model" value="Entities/Decor/flagThick44Prefab"/>
+	<property name="SortOrder2" value="0244b"/>
+</block>
+
+<block name="flagThick44BlockMissionaryGVariantHelper">
+	<property name="Extends" value="flagWallHungThick44BlackMissionaryG"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="SellableToTrader" value="false"/>
+	<property name="CustomIcon" value="flagWallHungThick44Black"/>
+	<property name="ItemTypeIcon" value="all_blocks"/>
+	<property name="SelectAlternates" value="true"/>
+	<property name="PlaceAltBlockValue" value="flagWallHungThick44BlackMissionaryG,flagWallHungThick44PurpleMissionaryG,flagWallHungThick44RedMissionaryG,flagWallHungThick44GreenMissionaryG,flagWallHungThick44GreyMissionaryG,flagWallHungThick44OrangeMissionaryG,flagWallHungThick44PinkMissionaryG,flagWallHungThick44BlueMissionaryG,flagWallHungThick44AquaMissionaryG,flagWallHungThick44BrownMissionaryG,flagWallHungThick44WhiteMissionaryG,flagWallHungThick44YellowMissionaryG,flagTopWallHungThick44BlackMissionaryG,flagTopWallHungThick44PurpleMissionaryG,flagTopWallHungThick44RedMissionaryG,flagTopWallHungThick44OrangeMissionaryG,flagTopWallHungThick44BlueMissionaryG,flagTopWallHungThick44PinkMissionaryG,flagTopWallHungThick44AquaMissionaryG,flagTopWallHungThick44BrownMissionaryG,flagTopWallHungThick44WhiteMissionaryG,flagTopWallHungThick44YellowMissionaryG,flagTopWallHungThick44GreenMissionaryG,flagTopWallHungThick44GreyMissionaryG"/>
+	<property name="SortOrder1" value="U200"/>
+	<property name="SortOrder2" value="0000"/>
+	<property name="FilterTags" value="MC_playerBlocks,SC_playerHelpers"/>
+</block>
+
+</append>
+
+<prepend xpath="/blocks/block[not(contains(@name,'MissionaryG')) and not(property[@name='Tags'])]">
+	<property name="Tags" value="new_journey"/>
+</prepend>
+
+<csv xpath="/blocks/block[not(contains(@name,'MissionaryG'))]/property[@name='Tags']/@value" op="Add">new_journey</csv>
+
+</Giuigi>
