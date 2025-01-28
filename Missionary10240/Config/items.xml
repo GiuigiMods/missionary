@@ -51,10 +51,56 @@
 	</effect_group>
 </item>
 
+<item name="bookPrayerMissionaryG">
+	<property name="DescriptionKey" value="bookPrayerMissionaryGDesc"/>
+	<property name="CustomIcon" value="schematicMaster"/>
+	<property name="HoldType" value="21"/>
+	<property name="Meshfile" value="@:Other/Items/Misc/bookPrefab.prefab"/>
+	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+	<property name="Material" value="Mpaper"/>
+	<property name="NoScrapping" value="true"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="EconomicValue" value="0"/>
+	<property name="SellableToTrader" value="false"/>
+	<property name="Group" value="Books,SchematicsOnly,TCReading"/>
+	<property name="SoundPickup" value="schematics_grab"/>
+	<property name="SoundPlace" value="schematics_place"/>
+</item>
+
+<item name="drinkJarEmptyMissionaryG">
+	<property name="DescriptionKey" value="drinkJarEmptyMissionaryGDesc"/>
+	<property name="HoldType" value="3"/>
+	<property name="Meshfile" value="@:Other/Items/Food/emptyJarPrefab.prefab"/>
+	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+	<property name="Material" value="Mglass"/>
+	<property name="NoScrapping" value="true"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="EconomicValue" value="0"/>
+	<property name="SellableToTrader" value="false"/>
+	<property name="Group" value="Resources"/>
+	<property name="SoundPickup" value="jars_grab"/>
+	<property name="SoundPlace" value="jars_place"/>
+</item>
+
+<item name="bucketWaterMissionaryG">
+	<property name="DescriptionKey" value="bucketWaterMissionaryGDesc"/>
+	<property name="HoldType" value="34"/>
+	<property name="Meshfile" value="@:Other/Items/Crafting/Metal/IronBucketWaterPrefab.prefab"/>
+	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="SoundPickup" value="bucket_water_grab"/>
+	<property name="SoundPlace" value="bucket_water_place"/>
+	<property name="CustomIcon" value="bucketRiverWater"/>
+	<property name="NoScrapping" value="true"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="EconomicValue" value="0"/>
+	<property name="SellableToTrader" value="false"/>
+</item>
+
 <item name="drinkJarRainbeerMissionaryG">
 	<property name="Extends" value="drinkJarBeer"/>
 	<property name="Tags" value="drinks,foodSkill,fitness"/>
-	<property name="EconomicValue" value="33"/>
+	<property name="EconomicValue" value="0"/>
 	<property name="DescriptionKey" value="drinkJarRainbeerMissionaryGDesc"/>
 	<property name="SellableToTrader" value="false"/>
 
