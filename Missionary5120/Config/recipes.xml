@@ -20,6 +20,12 @@
 	<ingredient name="plantMissionaryG" count="10"/>
 </recipe>
 
+<recipe name="drinkJarHolyWaterMissionaryG">
+	<ingredient name="bookPrayerMissionaryG" count="1"/>
+	<ingredient name="drinkJarEmptyMissionaryG" count="1"/>
+	<ingredient name="bucketWaterMissionaryG" count="1"/>
+</recipe>
+
 </append>
 
 </Giuigi>
