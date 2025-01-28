@@ -17,7 +17,7 @@
 		<action class="ModifyVarInt">
 			<property name="phase" value="1"/>
 			<property name="var_name" value="action_givemissionaryquestG_varint"/>
-			<property name="value" value="1-5"/>
+			<property name="value" value="1-10"/>
 		</action>
 		
 		<requirement class="HasBuffByTag">
@@ -134,6 +134,106 @@
 				<property name="operation" value="Equals"/>
 				<property name="var_name" value="action_givemissionaryquestG_varint"/>
 				<property name="value" value="5"/>
+			</requirement>
+			<property name="buff_name" value="buffProtectionBlessing28G"/>
+		</action>
+		
+		<action class="AddQuest">
+			<property name="phase" value="2"/>
+			<requirement class="VarInt">
+				<property name="operation" value="Equals"/>
+				<property name="var_name" value="action_givemissionaryquestG_varint"/>
+				<property name="value" value="6"/>
+			</requirement>
+			<property name="quest" value="tier1_fetch_MissionaryG"/>
+		</action>
+		
+		<action class="AddBuff">
+			<property name="phase" value="2"/>
+			<requirement class="VarInt">
+				<property name="operation" value="Equals"/>
+				<property name="var_name" value="action_givemissionaryquestG_varint"/>
+				<property name="value" value="6"/>
+			</requirement>
+			<property name="buff_name" value="buffProtectionBlessing7G"/>
+		</action>
+		
+		<action class="AddQuest">
+			<property name="phase" value="2"/>
+			<requirement class="VarInt">
+				<property name="operation" value="Equals"/>
+				<property name="var_name" value="action_givemissionaryquestG_varint"/>
+				<property name="value" value="7"/>
+			</requirement>
+			<property name="quest" value="tier2_fetch_MissionaryG"/>
+		</action>
+		
+		<action class="AddBuff">
+			<property name="phase" value="2"/>
+			<requirement class="VarInt">
+				<property name="operation" value="Equals"/>
+				<property name="var_name" value="action_givemissionaryquestG_varint"/>
+				<property name="value" value="7"/>
+			</requirement>
+			<property name="buff_name" value="buffProtectionBlessing14G"/>
+		</action>
+		
+		<action class="AddQuest">
+			<property name="phase" value="2"/>
+			<requirement class="VarInt">
+				<property name="operation" value="Equals"/>
+				<property name="var_name" value="action_givemissionaryquestG_varint"/>
+				<property name="value" value="8"/>
+			</requirement>
+			<property name="quest" value="tier3_fetch_MissionaryG"/>
+		</action>
+		
+		<action class="AddBuff">
+			<property name="phase" value="2"/>
+			<requirement class="VarInt">
+				<property name="operation" value="Equals"/>
+				<property name="var_name" value="action_givemissionaryquestG_varint"/>
+				<property name="value" value="8"/>
+			</requirement>
+			<property name="buff_name" value="buffProtectionBlessing14G"/>
+		</action>
+		
+		<action class="AddQuest">
+			<property name="phase" value="2"/>
+			<requirement class="VarInt">
+				<property name="operation" value="Equals"/>
+				<property name="var_name" value="action_givemissionaryquestG_varint"/>
+				<property name="value" value="9"/>
+			</requirement>
+			<property name="quest" value="tier4_fetch_MissionaryG"/>
+		</action>
+		
+		<action class="AddBuff">
+			<property name="phase" value="2"/>
+			<requirement class="VarInt">
+				<property name="operation" value="Equals"/>
+				<property name="var_name" value="action_givemissionaryquestG_varint"/>
+				<property name="value" value="9"/>
+			</requirement>
+			<property name="buff_name" value="buffProtectionBlessing28G"/>
+		</action>
+		
+		<action class="AddQuest">
+			<property name="phase" value="2"/>
+			<requirement class="VarInt">
+				<property name="operation" value="Equals"/>
+				<property name="var_name" value="action_givemissionaryquestG_varint"/>
+				<property name="value" value="10"/>
+			</requirement>
+			<property name="quest" value="tier5_fetch_MissionaryG"/>
+		</action>
+		
+		<action class="AddBuff">
+			<property name="phase" value="2"/>
+			<requirement class="VarInt">
+				<property name="operation" value="Equals"/>
+				<property name="var_name" value="action_givemissionaryquestG_varint"/>
+				<property name="value" value="10"/>
 			</requirement>
 			<property name="buff_name" value="buffProtectionBlessing28G"/>
 		</action>
