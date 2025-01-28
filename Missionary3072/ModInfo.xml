@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <xml>
-    <Name value="Missionary" />
-	<DisplayName value="Missionary" />
-    <Description value="This mod adds the option to be a missionary by completing quests given by the church and items associated with it" />
-    <Author value="Giuigi" />
-    <Website value="https://github.com/" />
-	<Version value="1.0.0" />
+    <Name value="Missionary"/>
+	<DisplayName value="Missionary"/>
+    <Description value="This mod adds the option to be a missionary by completing quests given by the church and items associated with it"/>
+    <Author value="Giuigi"/>
+    <Website value="https://github.com/GiuigiMods/missionary"/>
+	<Version value="1.0.0"/>
 </xml>
